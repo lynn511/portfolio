@@ -1,0 +1,483 @@
+{
+  "personal": {
+    "fullName": "Lynn El Moussaoui",
+    "displayName": "Lynn el Moussaoui",
+    "role": "Applied AI Engineer",
+    "bio": "Software engineer working at the intersection of AI, data, and scalable software systems.",
+    "siteDescription": "Lynn El Moussaoui - AI engineer specializing in applied machine learning, knowledge systems, and scalable AI infrastructure. Explore projects in AI systems, MLOps, and research.",
+    "profileImage": "/profile-img.jpg",
+    "siteUrl": "https://lynn511.github.io"
+  },
+  "socials": [
+    {
+      "name": "Github",
+      "username": "@lynn511",
+      "link": "https://github.com/lynn511"
+    },
+    {
+      "name": "LinkedIn",
+      "username": "Lynn El Moussaoui",
+      "link": "https://www.linkedin.com/in/lynn-el-moussaoui/"
+    },
+    {
+      "name": "Medium",
+      "username": "@lynnelmoussaoui",
+      "link": "https://medium.com/@lynnelmoussaoui"
+    },
+    {
+      "name": "Gmail",
+      "username": "lynnelmoussaoui",
+      "link": "mailto:lynnelmoussaoui@gmail.com"
+    }
+  ],
+  "projects": [
+    {
+      "id": "serverless-ai-chatbot",
+      "title": "Serverless AI CodeBase Auditor",
+      "type": "Personal",
+      "categories": ["AI", "Cloud", "Backend"],
+      "shortDescription": "Serverless AI chatbot deployed on AWS using Lambda, API Gateway, Bedrock and S3 memory storage.",
+      "techStack": ["Python", "FastAPI", "AWS Lambda", "API Gateway", "AWS Bedrock", "OpenTofu"],
+      "startDate": "2026-03-26",
+      "endDate": "2026-03-26",
+      "image": "/projects/serverless/codebase.png",
+      "links": {
+        "liveDemo": "https://codebase-auditor.vercel.app/",
+        "article": "https://medium.com/munchy-bytes/building-a-serverless-ai-tool-on-aws-fe2cfd752147"
+      },
+      "description": {
+        "paragraphs": [
+          "This project focuses on deploying AI systems using a fully serverless architecture.",
+          "The chatbot itself is intentionally simple, but the infrastructure demonstrates reproducible AI deployments using Infrastructure as Code."
+        ],
+        "bullets": [
+          "Built a serverless AI chatbot architecture using AWS services.",
+          "Integrated Amazon Bedrock for LLM inference.",
+          "Implemented infrastructure using OpenTofu (Terraform alternative).",
+          "Automated deployments using GitHub Actions pipelines."
+        ]
+      }
+    },
+    {
+      "id": "energy-routing-ai",
+      "title": "AI Routing for Energy Internet",
+      "type": "Personal",
+      "categories": ["AI", "Research", "Optimization"],
+      "shortDescription": "Simulation of intelligent routing strategies for power packet networks using graph optimization and reinforcement learning.",
+      "techStack": ["Python", "NetworkX", "Reinforcement Learning"],
+      "startDate": "2026-01-01",
+      "endDate": "present",
+      "image": "/projects/power packet/power_packet.jpg",
+      "links": {},
+      "description": {
+        "paragraphs": [
+          "This research project explores intelligent routing strategies for the Energy Internet, where electricity is transmitted in packetized form.",
+          "The system models energy routers as nodes in a graph and computes optimal paths based on loss minimization."
+        ],
+        "bullets": [
+          "Designed a graph-based simulation of packetized power routing.",
+          "Modeled electrical loss using I²R formulas.",
+          "Explored AI-driven routing strategies including reinforcement learning.",
+          "Investigated decentralized consensus for secure routing."
+        ]
+      }
+    },
+    {
+      "id": "strawberry-maturity-spectra",
+      "title": "Dimensionality Reduction of Infrared Spectra Using a Genetic Algorithm",
+      "type": "Personal",
+      "categories": ["AI", "Research", "Optimization"],
+      "shortDescription": "Final-year research project on reducing infrared spectral dimensionality with a genetic algorithm to identify markers of strawberry maturity.",
+      "techStack": ["Python", "Machine Learning", "SVM", "LDA"],
+      "startDate": "2024-01-01",
+      "endDate": "2024-05-01",
+      "image": "/projects/dim_red/fyp-bs.jpeg",
+      "links": {},
+      "description": {
+        "paragraphs": [
+          "As part of my Bachelor's in Mathematics with a specialization in Data Science, I completed a final-year research project supervised by Dr. Abbas Rammal.",
+          "The project focused on dimensionality reduction of infrared spectra using a genetic algorithm to identify the most relevant markers for strawberry maturity classification.",
+          "After feature selection, I evaluated the selected spectra using multiple machine learning models to assess classification performance and interpretability."
+        ],
+        "bullets": [
+          "Applied a genetic algorithm for infrared spectral feature selection.",
+          "Reduced high-dimensional spectra to the most informative maturity markers.",
+          "Evaluated classification performance using SVM, Decision Tree, Naive Bayes, and LDA.",
+          "Supported maturity assessment in an agricultural data science context."
+        ]
+      }
+    },
+    {
+      "id": "power-bi-a-z-training",
+      "title": "Power BI A-Z: Hands-On Power BI Training For Data Science",
+      "type": "Personal",
+      "categories": ["Data", "Analytics", "Visualization"],
+      "shortDescription": "Hands-on Power BI training project focused on building dashboards, transforming data, and creating business intelligence reports for data-driven decision-making.",
+      "techStack": ["PowerBI", "Data Analysis", "Visualization"],
+      "startDate": "2025-08-01",
+      "endDate": "2025-08-31",
+      "image": "/projects/powerbi/powerbi1.png",
+      "links": {
+        "github": "https://github.com/lynn511/Power-BI-A-Z-Hands-On-Power-BI-Training-For-Data-Science-Udemy"
+      },
+      "description": {
+        "paragraphs": [
+          "This project reflects my hands-on training in Power BI for data science and analytics workflows.",
+          "I worked on preparing data, designing interactive dashboards, and building reports that translate raw data into clear business insights.",
+          "The training strengthened my practical skills in business intelligence, data modeling, and visual communication."
+        ],
+        "bullets": [
+          "Built interactive dashboards and reports in Power BI.",
+          "Prepared and transformed data for analysis and visualization.",
+          "Used filters, slicers, and KPIs to improve dashboard usability.",
+          "Strengthened practical business intelligence and reporting skills."
+        ]
+      }
+    }
+  ],
+  "blogs": [
+    {
+      "slug": "serverless_ai_system_aws",
+      "title": "Serverless AI in aws",
+      "date": "2026-03-26",
+      "description": "Overview of how I deployed a minimal AI tool on AWS using a serverless architecture, combining a Vercel frontend, API Gateway, Lambda backend, and Bedrock for LLM inference.",
+      "tags": ["AI", "Serverless", "AWS"],
+      "readingTime": 5,
+      "featured": true,
+      "url": "https://medium.com/munchy-bytes/building-a-serverless-ai-tool-on-aws-fe2cfd752147"
+    },
+    {
+      "slug": "MLOPS V2: the clean project guide",
+      "title": "MLOPS V2: the clean project guide",
+      "date": "2026-03-19",
+      "description": "Guide to turning messy machine learning notebook work into a clean project structure using Git, modular architecture, and uv for dependency management.",
+      "tags": ["MLOps", "Git", "UV"],
+      "featured": true,
+      "url": "https://medium.com/munchy-bytes/mlops-v2-the-clean-project-guide-c5695522c277"
+    },
+    {
+      "slug": "faiss_similarity_search",
+      "title": "FAISS Similarity Search",
+      "date": "2025-08-22",
+      "description": "Introduction to FAISS similarity search, covering embeddings, distance metrics, indexing strategies, and the basics of HNSW for efficient vector retrieval.",
+      "tags": ["FAISS", "Similarity Search", "Vector Databases"],
+      "readingTime": 5,
+      "featured": true,
+      "url": "https://medium.com/munchy-bytes/faiss-similarity-search-ff113b9e87b7"
+    },
+    {
+      "slug": "async_embeddings",
+      "title": "Async Embeddings in Python",
+      "date": "2025-08-04",
+      "description": "Practical comparison of synchronous and asynchronous embedding calls in Python, showing how asyncio can speed up I/O-bound embedding pipelines.",
+      "tags": ["Python", "Asyncio", "Embeddings"],
+      "readingTime": 4,
+      "featured": true,
+      "url": "https://medium.com/munchy-bytes/async-embeddings-in-python-ff4471d3e54a"
+    },
+    {
+      "slug": "MLOps_101",
+      "title": "MLOps 101: MLOps Made Easy",
+      "date": "2023-10-01",
+      "description": "A practical introduction to MLOps concepts and workflows.",
+      "tags": ["MLOps", "Machine Learning", "Containers"],
+      "readingTime": 5,
+      "featured": true,
+      "url": "https://medium.com/munchy-bytes/mlops-101-9c1058d756f"
+    }
+  ],
+  "workshops": [
+    {
+      "title": "AI Workshop: BAU",
+      "organizer": "Beirut Arab University",
+      "description": "Delivered 3 hours workshop on AI, with hands on Python application",
+      "link": "https://www.bau.edu.lb/",
+      "photo": "/contributions/bau.png"
+    },
+    {
+      "title": "AI Workshop: AUB",
+      "organizer": "American University of Beirut",
+      "description": "Introduced students to Zaka during the 'Learn the Basics of AI' session",
+      "link": "https://www.aub.edu.lb/",
+      "photo": "/contributions/aub.png"
+    },
+    {
+      "title": "AI Workshop: Lebanese University",
+      "organizer": "Lebanese University",
+      "description": "Presented a technical session introducing machine learning concepts and practical Python workflows for data science applications.",
+      "link": "http://www.ul.edu.lb/",
+      "photo": "/contributions/LU.png"
+    },
+    {
+      "title": "AI Workshop: USJ",
+      "organizer": "Université Saint-Joseph de Beyrouth",
+      "description": "Delivered series of 4 applied AI session covering machine learning fundamentals and practical coding examples using Python.",
+      "link": "https://www.usj.edu.lb/",
+      "photo": "/contributions/lynn-usj.png"
+    },
+    {
+      "title": "AI Workshop: Multilane",
+      "organizer": "Multilane",
+      "description": "Conducted a workshop on Python and data science fundamentals, demonstrating practical machine learning workflows.",
+      "link": "https://multilane.com/",
+      "photo": "/contributions/multilane.png"
+    },
+    {
+      "title": "AI Workshop: Michel Daher Foundation",
+      "organizer": "Michel Daher Foundation",
+      "description": "Led a hands-on session introducing Python programming and the basics of machine learning for real-world applications.",
+      "link": "https://micheldaherfoundation.org/",
+      "photo": "/contributions/daher_foundation.png"
+    }
+  ],
+  "contributions": [
+    {
+      "title": "FedDQ",
+      "date": "2025-02-21",
+      "organizer": "IEEE MENACOMM 2025",
+      "description": "IEEE research paper proposing a federated framework for context-aware data quality assessment in IoT and wireless sensor networks.",
+      "link": "https://ieeexplore.ieee.org/document/10910992/",
+      "photo": "/contributions/contributions.jpg"
+    },
+    {
+      "title": "AI Accessibility & Science Communication",
+      "organizer": "L'Orient-Le Jour",
+      "description": "Featured in L'Orient-Le Jour (2024) for efforts to make artificial intelligence concepts accessible to the public.",
+      "link": "https://www.lorientlejour.com/article/1363911/lynn-el-moussaoui-entre-ethique-et-vulgarisation-des-sciences-au-service-de-la-societe.html",
+      "photo": "/contributions/lynn_olj.png"
+    }
+  ],
+  "experience": [
+    {
+      "id": "ai-economic-pulse",
+      "position": "AI Engineer",
+      "company": "AI Economic Pulse",
+      "location": "Remote",
+      "startDate": "2025-06-01",
+      "endDate": "2025-12-01",
+      "description": [
+        "Designed an end-to-end machine learning pipeline for GDP temporal disaggregation, producing weekly economic estimates from quarterly official data.",
+        "Developed forecasting models using scikit-learn with time-aware cross-validation and hyperparameter tuning to prevent data leakage.",
+        "Built a FAISS-based semantic similarity system to normalize and deduplicate job skill titles across heterogeneous labor market datasets."
+      ],
+      "achievements": [
+        "Enabled higher-frequency economic analysis for policy research through weekly GDP estimation.",
+        "Improved cross-source comparability of labor market datasets using semantic skill normalization.",
+        "Maintained production PowerBI dashboards on a monthly release cycle to support stakeholder reporting."
+      ],
+      "skills": ["Python", "Scikit-learn", "PowerBI"]
+    },
+    {
+      "id": "zaka",
+      "position": "Technical Ambassador",
+      "company": "ZAKA AI",
+      "location": "Lebanon",
+      "startDate": "2023-04-01",
+      "endDate": "Present",
+      "description": [
+        "Promote awareness of Artificial Intelligence through workshops and technical sessions.",
+        "Deliver talks and educational workshops to students and professionals across universities and organizations."
+      ],
+      "achievements": [
+        "Delivered AI workshops at Lebanese University, Saint Joseph University of Beirut, Multilane, and the Michel Daher Foundation.",
+        "Helped educate hundreds of students and professionals on AI, machine learning, and data science fundamentals."
+      ],
+      "skills": ["Python", "Public Speaking", "AI Theory"]
+    },
+    {
+      "id": "tech-blog",
+      "position": "Tech Blog Writer and editor",
+      "company": "Medium",
+      "location": "Remote",
+      "startDate": "2023-09-01",
+      "endDate": "Present",
+      "description": [
+        "Write technical articles on artificial intelligence, data science, and machine learning.",
+        "Explain complex AI concepts in accessible language for students and practitioners."
+      ],
+      "achievements": [
+        "Published articles on MLOps, statistics, data science, and data drift in computer vision.",
+        "Built a technical writing portfolio focused on simplifying machine learning concepts."
+      ],
+      "skills": ["Python", "TensorFlow", "PyTorch"]
+    },
+    {
+      "id": "monty",
+      "position": "Data Science Intern",
+      "company": "Monty",
+      "location": "Lebanon",
+      "startDate": "2024-01-01",
+      "endDate": "2024-05-01",
+      "description": [
+        "Developed Optical Character Recognition (OCR) workflows using Python.",
+        "Improved text extraction pipelines from multiple document formats.",
+        "Enhanced authentication processes using data extraction and machine learning techniques."
+      ],
+      "achievements": [
+        "Improved OCR algorithm accuracy for document processing workflows.",
+        "Developed machine learning models to optimize text analysis and data extraction pipelines."
+      ],
+      "skills": ["Computer Vision", "OCR", "Object Detection"]
+    },
+    {
+      "id": "obsoft",
+      "position": "Data Science Intern",
+      "company": "OBSoft",
+      "location": "Lebanon",
+      "startDate": "2023-05-01",
+      "endDate": "2023-06-01",
+      "description": [
+        "Explored blockchain and cryptocurrency transaction networks.",
+        "Analyzed wallet structures and transaction patterns using clustering techniques."
+      ],
+      "achievements": [
+        "Categorized cryptocurrency wallets based on transaction patterns.",
+        "Developed tagging strategies to identify wallet behaviors across blockchain networks."
+      ],
+      "skills": ["Crypto", "Fraudulent Exchanges"]
+    },
+    {
+      "id": "btekup",
+      "position": "AI Intern",
+      "company": "BTekUp",
+      "location": "Lebanon",
+      "startDate": "2023-02-01",
+      "endDate": "2023-04-01",
+      "description": [
+        "Researched AI approaches for web-based object detection systems.",
+        "Worked on improving product description accuracy in e-commerce platforms."
+      ],
+      "achievements": [
+        "Explored computer vision approaches for object detection in online product catalogs.",
+        "Improved semantic matching between product images and descriptions."
+      ],
+      "skills": ["Object Detection", "OCR"]
+    },
+    {
+      "id": "karma",
+      "position": "Operations Assistant",
+      "company": "Karma General Trading",
+      "location": "Lebanon",
+      "startDate": "2021-05-01",
+      "endDate": "2023-10-01",
+      "description": [
+        "Managed supply chain coordination and supplier communication.",
+        "Monitored stock levels and supported logistics operations."
+      ],
+      "achievements": [
+        "Improved supplier coordination processes and inventory management.",
+        "Ensured timely delivery and cost-efficient supply chain operations."
+      ],
+      "skills": ["Communication", "Sales", "Management"]
+    },
+    {
+      "id": "redcross",
+      "position": "Volunteer",
+      "company": "Lebanese Red Cross",
+      "location": "Lebanon",
+      "startDate": "2021-01-01",
+      "endDate": "2024-12-01",
+      "description": [
+        "Contributed to humanitarian and health awareness initiatives.",
+        "Participated in community outreach and emergency preparedness programs."
+      ],
+      "achievements": [
+        "Certified facilitator in the Humanitarian Values and Principles Program.",
+        "Certified facilitator in the Youth and Health Program.",
+        "Member of the Blood Drive Committee supporting national blood donation campaigns.",
+        "Completed Hostile Environment Awareness Training (HEAT).",
+        "Member of the Logistics Committee."
+      ],
+      "skills": ["Communication", "Leadership"]
+    },
+    {
+      "id": "dataaurora",
+      "position": "Data Science Intern",
+      "company": "Data Aurora",
+      "location": "Lebanon",
+      "startDate": "2019-07-01",
+      "endDate": "2019-08-01",
+      "description": [
+        "Explored statistical analysis and data science fundamentals.",
+        "Developed small-scale recommendation systems using Python."
+      ],
+      "achievements": [
+        "Applied statistical analysis to real-world datasets.",
+        "Built prototype recommendation systems and data analysis workflows."
+      ],
+      "skills": ["Python", "Data Science"]
+    }
+  ],
+  "skills": [
+    {
+      "name": "Python",
+      "description": "Primary language for building machine learning systems, data pipelines, and AI infrastructure."
+    },
+    {
+      "name": "PyTorch",
+      "description": "Deep learning framework used for training, fine-tuning, and experimenting with neural networks."
+    },
+    {
+      "name": "AWS",
+      "description": "Cloud platform used to deploy scalable AI systems using services such as Lambda, Bedrock, and API Gateway."
+    },
+    {
+      "name": "Git",
+      "description": "Version control system used for collaborative development and reliable AI project workflows."
+    },
+    {
+      "name": "LangChain",
+      "description": "Framework used to build LLM-powered applications, agents, and retrieval-augmented systems."
+    },
+    {
+      "name": "ChromaDB",
+      "description": "Vector database used for storing embeddings and enabling semantic retrieval in AI systems."
+    },
+    {
+      "name": "FastAPI",
+      "description": "High-performance API framework used to serve machine learning models and AI inference services."
+    },
+    {
+      "name": "Docker",
+      "description": "Containerization platform for packaging reproducible machine learning environments and deployments."
+    },
+    {
+      "name": "MLflow",
+      "description": "Experiment tracking and model lifecycle management for reproducible machine learning workflows."
+    },
+    {
+      "name": "TensorFlow",
+      "description": "Machine learning framework used for scalable ML pipelines and model experimentation."
+    },
+    {
+      "name": "OpenTofu",
+      "description": "Infrastructure-as-Code tool used to provision and manage cloud infrastructure reproducibly for AI systems and deployments."
+    },
+    {
+      "name": "Vercel",
+      "description": "Platform used to deploy modern web and AI applications with fast global edge delivery and serverless APIs."
+    },
+    {
+      "name": "GitHub Actions",
+      "description": "CI/CD automation platform used to build, test, and deploy machine learning and software systems automatically."
+    }
+  ],
+  "education": [
+    {
+      "degree": "Master of Science in Artificial Intelligence",
+      "institution": "Saint Joseph University of Beirut — ESIB",
+      "location": "Lebanon",
+      "startDate": "2024-09-01",
+      "endDate": "present",
+      "description": "Specialization in applied machine learning, knowledge systems, and scalable AI infrastructure."
+    },
+    {
+      "degree": "Bachelor of Science in Mathematics — Data Science",
+      "institution": "Saint Joseph University of Beirut — Faculty of Science",
+      "location": "Lebanon",
+      "startDate": "2021-09-01",
+      "endDate": "2024-06-01",
+      "description": "Specialization in Data Science. Final year research project on dimensionality reduction of infrared spectra using genetic algorithms."
+    }
+  ]
+}

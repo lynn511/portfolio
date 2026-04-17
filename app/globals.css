@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-white dark:bg-brand-blue text-gray-900 dark:text-white font-body antialiased;
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+}
+
+@layer utilities {
+  .reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal-on-scroll.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .card-dark {
+    background-color: rgba(255, 255, 255, 0.06);
+  }
+
+  .nav-blur {
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+  }
+
+  .orange-sweep {
+    position: relative;
+    display: inline-block;
+  }
+
+  .orange-sweep::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background-color: #D35400;
+    transition: width 0.3s ease;
+  }
+
+  .orange-sweep:hover::after {
+    width: 100%;
+  }
+
+  .blue-sweep::after {
+    background-color: #135480;
+  }
+}
