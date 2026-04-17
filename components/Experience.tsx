@@ -58,7 +58,6 @@ function ExperienceRow({
       {/* Content */}
       <div className="pb-10">
         <div className="rounded-xl p-3 sm:p-4 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors duration-300">
-          {/* Company + location */}
           <div className="flex flex-wrap items-center gap-2 mb-0.5">
             <span className="font-heading font-bold text-gray-900 dark:text-white">
               {entry.company}
@@ -68,17 +67,14 @@ function ExperienceRow({
             </span>
           </div>
 
-          {/* Position */}
           <p className="text-xs font-semibold uppercase tracking-widest text-brand-orange mb-2">
             {entry.position}
           </p>
 
-          {/* First bullet — always visible */}
           <p className="text-sm text-gray-600 dark:text-blue-100 leading-relaxed">
             {entry.description[0]}
           </p>
 
-          {/* Expandable content */}
           {hasMore && (
             <>
               <div
@@ -127,11 +123,17 @@ function ExperienceRow({
   )
 }
 
+const VISIBLE_COUNT = 4
+
 export default function Experience({
   experience,
 }: {
   experience: ExperienceEntry[]
 }) {
+  const [showAll, setShowAll] = useState(false)
+  const visible = experience.slice(0, VISIBLE_COUNT)
+  const hidden = experience.slice(VISIBLE_COUNT)
+
   return (
     <section id="experience" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
@@ -140,14 +142,48 @@ export default function Experience({
           heading="Experience"
           sub="Where I've worked and what I've built."
         />
+
         <div>
-          {experience.map((entry, i) => (
+          {visible.map((entry, i) => (
             <ExperienceRow
               key={entry.id}
               entry={entry}
-              isLast={i === experience.length - 1}
+              isLast={i === visible.length - 1 && hidden.length === 0}
             />
           ))}
+
+          {hidden.length > 0 && (
+            <>
+              {/* Collapsible extra entries */}
+              <div
+                className={`overflow-hidden transition-[max-height] duration-700 ease-in-out ${
+                  showAll ? 'max-h-[4000px]' : 'max-h-0'
+                }`}
+              >
+                {hidden.map((entry, i) => (
+                  <ExperienceRow
+                    key={entry.id}
+                    entry={entry}
+                    isLast={i === hidden.length - 1}
+                  />
+                ))}
+              </div>
+
+              {/* Show all / show less toggle */}
+              <div className="grid grid-cols-[72px_16px_1fr] sm:grid-cols-[96px_20px_1fr] gap-x-3 sm:gap-x-5">
+                <div />
+                <div />
+                <div className="pb-4">
+                  <button
+                    onClick={() => setShowAll((s) => !s)}
+                    className="text-sm font-medium px-5 py-2 rounded border border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white transition-colors"
+                  >
+                    {showAll ? 'Show less ↑' : `Show all experience ↓`}
+                  </button>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </section>

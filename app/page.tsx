@@ -23,6 +23,17 @@ export default function Home() {
         <Hero name={personal.displayName} role={personal.role} />
 
         <ScrollReveal>
+          <About
+            bio={personal.bio}
+            role={personal.role}
+            displayName={personal.displayName}
+            profileImage={personal.profileImage}
+            skills={skills}
+            socials={socials}
+          />
+        </ScrollReveal>
+
+        <ScrollReveal delay={100}>
           <Experience experience={experience} />
         </ScrollReveal>
 
@@ -40,17 +51,6 @@ export default function Home() {
 
         <ScrollReveal delay={100}>
           <Contributions contributions={contributions} />
-        </ScrollReveal>
-
-        <ScrollReveal delay={100}>
-          <About
-            bio={personal.bio}
-            role={personal.role}
-            displayName={personal.displayName}
-            profileImage={personal.profileImage}
-            skills={skills}
-            socials={socials}
-          />
         </ScrollReveal>
 
         <ScrollReveal delay={100}>

@@ -3,7 +3,7 @@
     "fullName": "Lynn El Moussaoui",
     "displayName": "Lynn el Moussaoui",
     "role": "Applied AI Engineer",
-    "bio": "Software engineer working at the intersection of AI, data, and scalable software systems.",
+    "bio": "I'm an Applied AI Engineer based in Lebanon, working at the intersection of machine learning, scalable systems, and real-world impact. I build AI infrastructure, conduct research, write technical articles on Medium, and deliver workshops across universities and organisations. Published at IEEE, featured in L'Orient-Le Jour, and always chasing the next hard problem.",
     "siteDescription": "Lynn El Moussaoui - AI engineer specializing in applied machine learning, knowledge systems, and scalable AI infrastructure. Explore projects in AI systems, MLOps, and research.",
     "profileImage": "/profile-img.jpg",
     "siteUrl": "https://lynn511.github.io"
@@ -138,7 +138,7 @@
   "blogs": [
     {
       "slug": "serverless_ai_system_aws",
-      "title": "Serverless AI in aws",
+      "title": "Serverless AI in AWS",
       "date": "2026-03-26",
       "description": "Overview of how I deployed a minimal AI tool on AWS using a serverless architecture, combining a Vercel frontend, API Gateway, Lambda backend, and Bedrock for LLM inference.",
       "tags": ["AI", "Serverless", "AWS"],
