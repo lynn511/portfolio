@@ -31,10 +31,10 @@ function ExperienceRow({
   const hasMore = entry.description.length > 1 || entry.skills.length > 0
 
   return (
-    <div className="grid grid-cols-[72px_16px_1fr] sm:grid-cols-[96px_20px_1fr] gap-x-3 sm:gap-x-5">
+    <div className="grid grid-cols-[56px_12px_1fr] xs:grid-cols-[72px_16px_1fr] sm:grid-cols-[96px_20px_1fr] gap-x-2 xs:gap-x-3 sm:gap-x-5">
       {/* Date */}
       <div className="text-right pt-1 pb-10">
-        <span className="text-[11px] sm:text-xs text-gray-400 dark:text-blue-300 tabular-nums leading-[1.8]">
+        <span className="text-[10px] xs:text-[11px] sm:text-xs text-gray-400 dark:text-blue-300 tabular-nums leading-[1.8]">
           {fmtDate(entry.startDate)}
           <br />
           <span className="opacity-60">–</span>
@@ -170,7 +170,7 @@ export default function Experience({
               </div>
 
               {/* Show all / show less toggle */}
-              <div className="grid grid-cols-[72px_16px_1fr] sm:grid-cols-[96px_20px_1fr] gap-x-3 sm:gap-x-5">
+              <div className="grid grid-cols-[56px_12px_1fr] xs:grid-cols-[72px_16px_1fr] sm:grid-cols-[96px_20px_1fr] gap-x-2 xs:gap-x-3 sm:gap-x-5">
                 <div />
                 <div />
                 <div className="pb-4">

@@ -40,7 +40,7 @@ const About: FC<Props> = ({ bio, role, displayName, profileImage, skills, social
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Profile image with offset orange border frame */}
-          <div className="relative inline-block w-full max-w-sm mx-auto lg:mx-0">
+          <div className="relative inline-block w-full max-w-sm mx-auto lg:mx-0 order-last lg:order-first">
             <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-brand-orange rounded-2xl" />
             <div className="relative z-10 rounded-2xl overflow-hidden aspect-square">
               <Image
@@ -102,7 +102,7 @@ const About: FC<Props> = ({ bio, role, displayName, profileImage, skills, social
                   href={s.link}
                   target={s.link.startsWith('mailto') ? undefined : '_blank'}
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 dark:border-white/20 hover:border-brand-orange dark:hover:border-brand-orange hover:text-brand-orange transition-colors text-sm text-gray-600 dark:text-blue-100"
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 dark:border-white/20 hover:border-brand-orange dark:hover:border-brand-orange hover:text-brand-orange transition-colors text-sm text-gray-600 dark:text-blue-100"
                 >
                   <span className="text-xs font-bold text-brand-blue dark:text-blue-300">
                     {socialIcons[s.name] ?? s.name[0]}

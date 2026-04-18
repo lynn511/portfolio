@@ -38,6 +38,10 @@ export default function Home() {
         </ScrollReveal>
 
         <ScrollReveal delay={100}>
+          <Education education={education} />
+        </ScrollReveal>
+
+        <ScrollReveal delay={100}>
           <Work projects={projects} />
         </ScrollReveal>
 
@@ -51,10 +55,6 @@ export default function Home() {
 
         <ScrollReveal delay={100}>
           <Contributions contributions={contributions} />
-        </ScrollReveal>
-
-        <ScrollReveal delay={100}>
-          <Education education={education} />
         </ScrollReveal>
       </main>
 

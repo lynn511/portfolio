@@ -49,11 +49,11 @@ export default function Hero({ name, role }: { name: string; role: string }) {
     <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-16">
       {/* Eyebrow */}
       <p className="mb-6 text-xs font-medium tracking-[0.2em] uppercase text-gray-400 dark:text-blue-200">
-        {role}&nbsp;·&nbsp;Software&nbsp;·&nbsp;Research&nbsp;·&nbsp;Workshops&nbsp;·&nbsp;Writing
+        {role}&nbsp;·&nbsp;Software&nbsp;·&nbsp;Mathematics&nbsp;·&nbsp;Research&nbsp;·&nbsp;Workshops&nbsp;·&nbsp;Writing
       </p>
 
       {/* Headline */}
-      <h1 className="font-heading font-black text-[clamp(5rem,16vw,12rem)] leading-none tracking-[-0.03em] text-gray-900 dark:text-white mb-6 select-none">
+      <h1 className="font-heading font-black text-[clamp(2.5rem,12vw,12rem)] leading-none tracking-[-0.03em] text-gray-900 dark:text-white mb-6 select-none">
         {formatLogoName(name)}
       </h1>
 
@@ -73,7 +73,7 @@ export default function Hero({ name, role }: { name: string; role: string }) {
       </div>
 
       {/* CTAs */}
-      <div className="flex flex-wrap gap-4 justify-center mb-16">
+      <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center mb-16">
         <Link
           href="#work"
           className="px-7 py-3 rounded-full bg-brand-orange text-white font-medium hover:bg-[#b8480a] transition-colors"

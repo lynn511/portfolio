@@ -9,7 +9,7 @@ const fontHeading = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Lynn El Moussaoui — Applied AI Engineer',
+  title: 'Lynn El Moussaoui | Applied AI Engineer',
   description: 'Software engineer working at the intersection of AI, data, and scalable software systems.',
 }
 

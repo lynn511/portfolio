@@ -3,7 +3,20 @@
     "allow": [
       "Bash(npm install *)",
       "Bash(npx next *)",
-      "Bash(curl -s http://localhost:3001)"
+      "Bash(curl -s http://localhost:3001)",
+      "Bash(npm run *)",
+      "WebFetch(domain:medium.com)",
+      "Bash(curl -s \"https://medium.com/munchy-bytes/mlops-v2-the-clean-project-guide-c5695522c277\")",
+      "Bash(curl -s \"https://medium.com/munchy-bytes/faiss-similarity-search-ff113b9e87b7\")",
+      "Bash(curl -s \"https://medium.com/munchy-bytes/async-embeddings-in-python-ff4471d3e54a\")",
+      "Bash(curl -s \"https://medium.com/munchy-bytes/mlops-101-9c1058d756f\")",
+      "Bash(curl -s \"https://medium.com/munchy-bytes/building-a-serverless-ai-tool-on-aws-fe2cfd752147\")",
+      "Bash(curl -s -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://medium.com/munchy-bytes/building-a-serverless-ai-tool-on-aws-fe2cfd752147\")",
+      "Bash(curl -s -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://medium.com/munchy-bytes/mlops-v2-the-clean-project-guide-c5695522c277\")",
+      "Bash(curl -s -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://medium.com/munchy-bytes/faiss-similarity-search-ff113b9e87b7\")",
+      "Bash(curl -s -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://medium.com/munchy-bytes/async-embeddings-in-python-ff4471d3e54a\")",
+      "Bash(curl -s -H \"User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36\" \"https://medium.com/munchy-bytes/mlops-101-9c1058d756f\")",
+      "Bash(curl -s -I --max-time 10 \"https://miro.medium.com/v2/da:true/resize:fit:1200/0*7mMGGBq0o77Ppyrd\")"
     ]
   }
 }

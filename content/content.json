@@ -81,59 +81,8 @@
           "Investigated decentralized consensus for secure routing."
         ]
       }
-    },
-    {
-      "id": "strawberry-maturity-spectra",
-      "title": "Dimensionality Reduction of Infrared Spectra Using a Genetic Algorithm",
-      "type": "Personal",
-      "categories": ["AI", "Research", "Optimization"],
-      "shortDescription": "Final-year research project on reducing infrared spectral dimensionality with a genetic algorithm to identify markers of strawberry maturity.",
-      "techStack": ["Python", "Machine Learning", "SVM", "LDA"],
-      "startDate": "2024-01-01",
-      "endDate": "2024-05-01",
-      "image": "/projects/dim_red/fyp-bs.jpeg",
-      "links": {},
-      "description": {
-        "paragraphs": [
-          "As part of my Bachelor's in Mathematics with a specialization in Data Science, I completed a final-year research project supervised by Dr. Abbas Rammal.",
-          "The project focused on dimensionality reduction of infrared spectra using a genetic algorithm to identify the most relevant markers for strawberry maturity classification.",
-          "After feature selection, I evaluated the selected spectra using multiple machine learning models to assess classification performance and interpretability."
-        ],
-        "bullets": [
-          "Applied a genetic algorithm for infrared spectral feature selection.",
-          "Reduced high-dimensional spectra to the most informative maturity markers.",
-          "Evaluated classification performance using SVM, Decision Tree, Naive Bayes, and LDA.",
-          "Supported maturity assessment in an agricultural data science context."
-        ]
-      }
-    },
-    {
-      "id": "power-bi-a-z-training",
-      "title": "Power BI A-Z: Hands-On Power BI Training For Data Science",
-      "type": "Personal",
-      "categories": ["Data", "Analytics", "Visualization"],
-      "shortDescription": "Hands-on Power BI training project focused on building dashboards, transforming data, and creating business intelligence reports for data-driven decision-making.",
-      "techStack": ["PowerBI", "Data Analysis", "Visualization"],
-      "startDate": "2025-08-01",
-      "endDate": "2025-08-31",
-      "image": "/projects/powerbi/powerbi1.png",
-      "links": {
-        "github": "https://github.com/lynn511/Power-BI-A-Z-Hands-On-Power-BI-Training-For-Data-Science-Udemy"
-      },
-      "description": {
-        "paragraphs": [
-          "This project reflects my hands-on training in Power BI for data science and analytics workflows.",
-          "I worked on preparing data, designing interactive dashboards, and building reports that translate raw data into clear business insights.",
-          "The training strengthened my practical skills in business intelligence, data modeling, and visual communication."
-        ],
-        "bullets": [
-          "Built interactive dashboards and reports in Power BI.",
-          "Prepared and transformed data for analysis and visualization.",
-          "Used filters, slicers, and KPIs to improve dashboard usability.",
-          "Strengthened practical business intelligence and reporting skills."
-        ]
-      }
     }
+
   ],
   "blogs": [
     {
@@ -141,6 +90,7 @@
       "title": "Serverless AI in AWS",
       "date": "2026-03-26",
       "description": "Overview of how I deployed a minimal AI tool on AWS using a serverless architecture, combining a Vercel frontend, API Gateway, Lambda backend, and Bedrock for LLM inference.",
+      "coverImage": "https://miro.medium.com/v2/da:true/resize:fit:1200/0*7mMGGBq0o77Ppyrd",
       "tags": ["AI", "Serverless", "AWS"],
       "readingTime": 5,
       "featured": true,
@@ -151,6 +101,7 @@
       "title": "MLOPS V2: the clean project guide",
       "date": "2026-03-19",
       "description": "Guide to turning messy machine learning notebook work into a clean project structure using Git, modular architecture, and uv for dependency management.",
+      "coverImage": "https://miro.medium.com/v2/resize:fit:640/format:webp/0*BGXly29egBSgIsye",
       "tags": ["MLOps", "Git", "UV"],
       "featured": true,
       "url": "https://medium.com/munchy-bytes/mlops-v2-the-clean-project-guide-c5695522c277"
@@ -160,6 +111,7 @@
       "title": "FAISS Similarity Search",
       "date": "2025-08-22",
       "description": "Introduction to FAISS similarity search, covering embeddings, distance metrics, indexing strategies, and the basics of HNSW for efficient vector retrieval.",
+      "coverImage": "https://miro.medium.com/v2/resize:fit:640/format:webp/0*AA75SUVdrGtpfwji",
       "tags": ["FAISS", "Similarity Search", "Vector Databases"],
       "readingTime": 5,
       "featured": true,
@@ -170,6 +122,7 @@
       "title": "Async Embeddings in Python",
       "date": "2025-08-04",
       "description": "Practical comparison of synchronous and asynchronous embedding calls in Python, showing how asyncio can speed up I/O-bound embedding pipelines.",
+      "coverImage": "https://miro.medium.com/v2/resize:fit:640/format:webp/0*lI60ASWzp98I4g6p",
       "tags": ["Python", "Asyncio", "Embeddings"],
       "readingTime": 4,
       "featured": true,
@@ -180,6 +133,7 @@
       "title": "MLOps 101: MLOps Made Easy",
       "date": "2023-10-01",
       "description": "A practical introduction to MLOps concepts and workflows.",
+      "coverImage": "https://miro.medium.com/v2/da:true/resize:fit:1200/0*ckqf0B1UDdzCtefa",
       "tags": ["MLOps", "Machine Learning", "Containers"],
       "readingTime": 5,
       "featured": true,
@@ -244,7 +198,7 @@
       "organizer": "L'Orient-Le Jour",
       "description": "Featured in L'Orient-Le Jour (2024) for efforts to make artificial intelligence concepts accessible to the public.",
       "link": "https://www.lorientlejour.com/article/1363911/lynn-el-moussaoui-entre-ethique-et-vulgarisation-des-sciences-au-service-de-la-societe.html",
-      "photo": "/contributions/lynn_olj.png"
+      "photo": "/contributions/lynn_olj.jpg"
     }
   ],
   "experience": [
