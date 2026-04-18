@@ -23,14 +23,14 @@ const Footer: FC<Props> = ({ displayName, socials }) => {
           © {year} {displayName}
         </p>
 
-        <div className="flex items-center gap-6">
+        <div className="flex flex-wrap justify-center sm:justify-end items-center gap-x-6 gap-y-2">
           {footerLinks.map((s) => (
             <a
               key={s.name}
               href={s.link}
               target={s.link.startsWith('mailto') ? undefined : '_blank'}
               rel="noopener noreferrer"
-              className="text-sm text-gray-500 dark:text-blue-200 hover:text-brand-orange transition-colors"
+              className="text-sm text-gray-500 dark:text-blue-200 hover:text-brand-orange transition-colors py-1"
             >
               {s.name}
             </a>

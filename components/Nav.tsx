@@ -27,30 +27,30 @@ export default function Nav() {
           lynn.el moussaoui
         </Link>
 
-        <div className="flex items-center gap-4 xl:gap-5">
-          {/* Desktop links */}
+        <div className="flex items-center gap-1 md:gap-2 lg:gap-4 xl:gap-5">
+          {/* Desktop links — visible from 768 px, compact text until 1024 px */}
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
-              className="text-sm text-gray-600 dark:text-blue-100 hover:text-brand-orange dark:hover:text-brand-orange transition-colors hidden lg:block"
+              className="hidden md:block text-xs lg:text-sm whitespace-nowrap text-gray-600 dark:text-blue-100 hover:text-brand-orange dark:hover:text-brand-orange transition-colors px-1 py-3"
             >
               {l.label}
             </Link>
           ))}
 
-          {/* CV button */}
+          {/* CV button — lg+ only to avoid crowding at 768 px */}
           <a
             href="/lynn-cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden md:inline-flex items-center gap-1 px-3 py-1 text-sm font-medium rounded border-[1.5px] border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white transition-colors"
+            className="hidden lg:inline-flex items-center gap-1 px-3 py-1 text-sm font-medium rounded border-[1.5px] border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white transition-colors"
           >
             <span className="text-xs leading-none">↓</span>
             CV
           </a>
 
-          {/* Dark mode pill */}
+          {/* Dark mode toggle */}
           {mounted && (
             <button
               onClick={toggle}
@@ -69,11 +69,11 @@ export default function Nav() {
             </button>
           )}
 
-          {/* Hamburger button — visible below lg */}
+          {/* Hamburger — visible below 768 px, min 44×44 tap target */}
           <button
             onClick={() => setMenuOpen((o) => !o)}
             aria-label="Toggle menu"
-            className="lg:hidden flex flex-col justify-center items-center w-8 h-8 gap-[5px] shrink-0"
+            className="md:hidden inline-flex flex-col justify-center items-center min-w-[44px] min-h-[44px] gap-[5px] shrink-0"
           >
             <span
               className={`block w-5 h-0.5 bg-gray-700 dark:bg-white rounded-full transition-all duration-300 origin-center ${
@@ -94,19 +94,19 @@ export default function Nav() {
         </div>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile drawer — slides down below 768 px */}
       <div
-        className={`lg:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out ${
-          menuOpen ? 'max-h-96' : 'max-h-0'
+        className={`md:hidden overflow-hidden transition-[max-height] duration-300 ease-in-out ${
+          menuOpen ? 'max-h-[480px]' : 'max-h-0'
         }`}
       >
-        <div className="px-6 pt-3 pb-5 border-t border-gray-200/30 dark:border-white/10 flex flex-col gap-3">
+        <div className="px-6 pb-4 border-t border-gray-200/30 dark:border-white/10 flex flex-col">
           {links.map((l) => (
             <Link
               key={l.href}
               href={l.href}
               onClick={() => setMenuOpen(false)}
-              className="text-sm text-gray-600 dark:text-blue-100 hover:text-brand-orange dark:hover:text-brand-orange transition-colors py-0.5"
+              className="text-sm text-gray-700 dark:text-blue-100 hover:text-brand-orange dark:hover:text-brand-orange transition-colors py-3 border-b border-gray-100/50 dark:border-white/5 last:border-0"
             >
               {l.label}
             </Link>
@@ -115,10 +115,10 @@ export default function Nav() {
             href="/lynn-cv.pdf"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium rounded border-[1.5px] border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white transition-colors w-fit mt-1"
+            className="inline-flex items-center gap-1 px-4 py-3 mt-2 text-sm font-medium rounded border-[1.5px] border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white transition-colors w-fit"
           >
             <span className="text-xs leading-none">↓</span>
-            CV
+            Download CV
           </a>
         </div>
       </div>

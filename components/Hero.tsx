@@ -58,25 +58,25 @@ export default function Hero({ name, role }: { name: string; role: string }) {
       </h1>
 
       {/* Subtitle */}
-      <p className="text-2xl font-light text-gray-500 dark:text-blue-100 mb-4 tracking-wide">
+      <p className="text-[clamp(1rem,5vw,1.5rem)] font-light text-gray-500 dark:text-blue-100 mb-4 tracking-wide">
         builder.&nbsp;thinker.{' '}
         <span className="text-brand-blue dark:text-blue-300 font-medium">explorer.</span>
       </p>
 
       {/* Typing animation */}
-      <div className="h-9 mb-10 flex items-center gap-2 text-lg text-gray-500 dark:text-blue-200">
+      <div className="h-9 mb-10 flex items-center gap-2 text-[clamp(0.9rem,3vw,1.125rem)] text-gray-500 dark:text-blue-200">
         <span className="text-brand-orange font-medium">→</span>
-        <span className="font-medium text-gray-700 dark:text-white min-w-[220px] text-left">
+        <span className="font-medium text-gray-700 dark:text-white min-w-[160px] sm:min-w-[220px] text-left">
           {displayed}
           <span className="animate-blink text-brand-orange">|</span>
         </span>
       </div>
 
       {/* CTAs */}
-      <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center items-center mb-16">
+      <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 w-full px-4 sm:px-0">
         <Link
           href="#work"
-          className="px-7 py-3 rounded-full bg-brand-orange text-white font-medium hover:bg-[#b8480a] transition-colors"
+          className="w-full sm:w-auto text-center px-7 py-3 rounded-full bg-brand-orange text-white font-medium hover:bg-[#b8480a] transition-colors"
         >
           See my work
         </Link>
@@ -84,7 +84,7 @@ export default function Hero({ name, role }: { name: string; role: string }) {
           href="https://medium.com/@lynnelmoussaoui"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-7 py-3 rounded-full border-2 border-brand-blue text-brand-blue dark:text-blue-200 dark:border-blue-300 font-medium hover:bg-brand-blue hover:text-white transition-colors"
+          className="w-full sm:w-auto text-center px-7 py-3 rounded-full border-2 border-brand-blue text-brand-blue dark:text-blue-200 dark:border-blue-300 font-medium hover:bg-brand-blue hover:text-white transition-colors"
         >
           Read the blog
         </Link>
