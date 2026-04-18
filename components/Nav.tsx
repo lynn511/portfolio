@@ -18,7 +18,7 @@ export default function Nav() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 nav-blur bg-white/80 dark:bg-brand-blue/80 border-b border-gray-200/30 dark:border-white/10">
+    <nav className="fixed top-0 left-0 right-0 z-50 nav-blur bg-white/95 dark:bg-[#0c2f4a] border-b border-gray-200/40 dark:border-white/20">
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
         <Link
           href="/"
@@ -76,17 +76,17 @@ export default function Nav() {
             className="md:hidden inline-flex flex-col justify-center items-center min-w-[44px] min-h-[44px] gap-[5px] shrink-0"
           >
             <span
-              className={`block w-5 h-0.5 bg-gray-700 dark:bg-white rounded-full transition-all duration-300 origin-center ${
+              className={`block w-6 h-[3px] bg-gray-800 dark:bg-white rounded-full transition-all duration-300 origin-center ${
                 menuOpen ? 'rotate-45 translate-y-[7px]' : ''
               }`}
             />
             <span
-              className={`block w-5 h-0.5 bg-gray-700 dark:bg-white rounded-full transition-all duration-300 ${
+              className={`block w-6 h-[3px] bg-gray-800 dark:bg-white rounded-full transition-all duration-300 ${
                 menuOpen ? 'opacity-0 scale-x-0' : ''
               }`}
             />
             <span
-              className={`block w-5 h-0.5 bg-gray-700 dark:bg-white rounded-full transition-all duration-300 origin-center ${
+              className={`block w-6 h-[3px] bg-gray-800 dark:bg-white rounded-full transition-all duration-300 origin-center ${
                 menuOpen ? '-rotate-45 -translate-y-[7px]' : ''
               }`}
             />

@@ -48,8 +48,8 @@ export default function Hero({ name, role }: { name: string; role: string }) {
   return (
     <section className="relative min-h-screen flex flex-col items-center justify-center text-center px-6 pt-24 pb-16">
       {/* Eyebrow */}
-      <p className="mb-6 text-xs font-medium tracking-[0.2em] uppercase text-gray-400 dark:text-blue-200">
-        {role}&nbsp;·&nbsp;Software&nbsp;·&nbsp;Mathematics&nbsp;·&nbsp;Research&nbsp;·&nbsp;Workshops&nbsp;·&nbsp;Writing
+      <p className="mb-6 text-xs font-medium tracking-[0.15em] uppercase text-gray-500 dark:text-white/90 leading-relaxed">
+        {role} · Software · Mathematics · Research · Workshops · Writing
       </p>
 
       {/* Headline */}
