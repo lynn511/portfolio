@@ -11,6 +11,13 @@ const fontHeading = localFont({
 export const metadata: Metadata = {
   title: 'Lynn El Moussaoui | Applied AI Engineer',
   description: 'Software engineer working at the intersection of AI, data, and scalable software systems.',
+  icons: {
+    icon: [
+      { url: '/favicon.png', sizes: '192x192', type: 'image/png' },
+      { url: '/favicon.png', sizes: '32x32', type: 'image/png' },
+    ],
+    apple: '/favicon.png',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
