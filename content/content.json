@@ -3,7 +3,7 @@
     "fullName": "Lynn El Moussaoui",
     "displayName": "Lynn el Moussaoui",
     "role": "Applied AI Engineer",
-    "bio": "I'm an Applied AI Engineer based in Lebanon, working at the intersection of machine learning, scalable systems, and real-world impact. I build AI infrastructure, conduct research, write technical articles on Medium, and deliver workshops across universities and organisations. Published at IEEE, featured in L'Orient-Le Jour, and always chasing the next hard problem.",
+    "bio": "I’m an Applied AI developer based in Lebanon. I like research and development, and I write tech blogs to simplify some AI topics. I deliver AI workshops across universities. Published at IEEE, featured in L'Orient-Le Jour, and always chasing the next hard problem :)",
     "siteDescription": "Lynn El Moussaoui - AI engineer specializing in applied machine learning, knowledge systems, and scalable AI infrastructure. Explore projects in AI systems, MLOps, and research.",
     "profileImage": "/profile-img.jpg",
     "siteUrl": "https://lynn511.github.io"
@@ -44,46 +44,29 @@
       "links": {
         "liveDemo": "https://codebase-auditor.vercel.app/",
         "article": "https://medium.com/munchy-bytes/building-a-serverless-ai-tool-on-aws-fe2cfd752147"
-      },
-      "description": {
-        "paragraphs": [
-          "This project focuses on deploying AI systems using a fully serverless architecture.",
-          "The chatbot itself is intentionally simple, but the infrastructure demonstrates reproducible AI deployments using Infrastructure as Code."
-        ],
-        "bullets": [
-          "Built a serverless AI chatbot architecture using AWS services.",
-          "Integrated Amazon Bedrock for LLM inference.",
-          "Implemented infrastructure using OpenTofu (Terraform alternative).",
-          "Automated deployments using GitHub Actions pipelines."
-        ]
       }
     },
     {
-      "id": "energy-routing-ai",
-      "title": "AI Routing for Energy Internet",
-      "type": "Personal",
-      "categories": ["AI", "Research", "Optimization"],
-      "shortDescription": "Simulation of intelligent routing strategies for power packet networks using graph optimization and reinforcement learning.",
-      "techStack": ["Python", "NetworkX", "Reinforcement Learning"],
-      "startDate": "2026-01-01",
-      "endDate": "present",
-      "image": "/projects/power packet/power_packet.jpg",
-      "links": {},
-      "description": {
-        "paragraphs": [
-          "This research project explores intelligent routing strategies for the Energy Internet, where electricity is transmitted in packetized form.",
-          "The system models energy routers as nodes in a graph and computes optimal paths based on loss minimization."
-        ],
-        "bullets": [
-          "Designed a graph-based simulation of packetized power routing.",
-          "Modeled electrical loss using I²R formulas.",
-          "Explored AI-driven routing strategies including reinforcement learning.",
-          "Investigated decentralized consensus for secure routing."
-        ]
+      "id": "graph-rag-halytech",
+      "title": "Graph-RAG Knowledge Assistant",
+      "type": "Academic / Personal",
+      "categories": ["AI", "RAG", "Knowledge Graphs", "Backend"],
+      "shortDescription": "Graph-based Retrieval-Augmented Generation system combining vector search and knowledge graphs for structured, context-aware question answering over documents.",
+      "techStack": [
+        "Python",
+        "LangChain",
+        "ChromaDB",
+        "NetworkX",
+        "FAISS",
+        "FastAPI"
+      ],
+      "startDate": "2026-02-01",
+      "endDate": "2026-04-01",
+      "image": "/projects/graphrag/graph-rag.png",
+      "links": {
+        "github": "https://github.com/lynn511/Graph-Rag-Halytech"
       }
     }
-
-
   ],
   "blogs": [
     {
@@ -211,12 +194,11 @@
       "startDate": "2025-06-01",
       "endDate": "2025-12-01",
       "description": [
-        "Designed an end-to-end machine learning pipeline for GDP temporal disaggregation, producing weekly economic estimates from quarterly official data.",
-        "Developed forecasting models using scikit-learn with time-aware cross-validation and hyperparameter tuning to prevent data leakage.",
-        "Built a FAISS-based semantic similarity system to normalize and deduplicate job skill titles across heterogeneous labor market datasets."
-      ],
-      "achievements": [
-        "Enabled higher-frequency economic analysis for policy research through weekly GDP estimation.",
+        "Worked at the intersection of AI and Economics",
+        "Developed predictive models using scikit-learn with time-aware validation strategies and robust hyperparameter tuning to avoid leakage.",
+        "Built semantic similarity systems using vector search (using FAISS) to standardize and deduplicate unstructured text across heterogeneous datasets.",
+        "Enabled higher-frequency insights from aggregated data through machine learning–based temporal transformation.",
+        "Contributed to research and development efforts focused on time-series modeling and economic data analysis.",
         "Improved cross-source comparability of labor market datasets using semantic skill normalization.",
         "Maintained production PowerBI dashboards on a monthly release cycle to support stakeholder reporting."
       ],
@@ -230,13 +212,8 @@
       "startDate": "2023-04-01",
       "endDate": "Present",
       "description": [
-        "Promote awareness of Artificial Intelligence through workshops and technical sessions.",
-        "Deliver talks and educational workshops to students and professionals across universities and organizations."
-      ],
-      "achievements": [
-        "Delivered AI workshops at Lebanese University, Saint Joseph University of Beirut, Multilane, and the Michel Daher Foundation.",
-        "Helped educate hundreds of students and professionals on AI, machine learning, and data science fundamentals."
-      ],
+        "Helped educate hundreds of students and professionals on AI, machine learning, and data science fundamentals.",
+        "Delivered AI workshops at Lebanese University, Saint Joseph University of Beirut, American University of Beirut, Beirut Arab University, Multilane, and the Michel Daher Foundation."      ],
       "skills": ["Python", "Public Speaking", "AI Theory"]
     },
     {
@@ -247,12 +224,8 @@
       "startDate": "2023-09-01",
       "endDate": "Present",
       "description": [
-        "Write technical articles on artificial intelligence, data science, and machine learning.",
-        "Explain complex AI concepts in accessible language for students and practitioners."
-      ],
-      "achievements": [
-        "Published articles on MLOps, statistics, data science, and data drift in computer vision.",
-        "Built a technical writing portfolio focused on simplifying machine learning concepts."
+        "I write technical articles on artificial intelligence, data science, and machine learning.",
+        "Published articles on MLOps, statistics, data science, and data drift in computer vision."
       ],
       "skills": ["Python", "TensorFlow", "PyTorch"]
     },
@@ -266,9 +239,7 @@
       "description": [
         "Developed Optical Character Recognition (OCR) workflows using Python.",
         "Improved text extraction pipelines from multiple document formats.",
-        "Enhanced authentication processes using data extraction and machine learning techniques."
-      ],
-      "achievements": [
+        "Enhanced authentication processes using data extraction and machine learning techniques.",
         "Improved OCR algorithm accuracy for document processing workflows.",
         "Developed machine learning models to optimize text analysis and data extraction pipelines."
       ],
@@ -283,9 +254,7 @@
       "endDate": "2023-06-01",
       "description": [
         "Explored blockchain and cryptocurrency transaction networks.",
-        "Analyzed wallet structures and transaction patterns using clustering techniques."
-      ],
-      "achievements": [
+        "Analyzed wallet structures and transaction patterns using clustering techniques.",
         "Categorized cryptocurrency wallets based on transaction patterns.",
         "Developed tagging strategies to identify wallet behaviors across blockchain networks."
       ],
@@ -300,9 +269,7 @@
       "endDate": "2023-04-01",
       "description": [
         "Researched AI approaches for web-based object detection systems.",
-        "Worked on improving product description accuracy in e-commerce platforms."
-      ],
-      "achievements": [
+        "Worked on improving product description accuracy in e-commerce platforms.",
         "Explored computer vision approaches for object detection in online product catalogs.",
         "Improved semantic matching between product images and descriptions."
       ],
@@ -317,9 +284,7 @@
       "endDate": "2023-10-01",
       "description": [
         "Managed supply chain coordination and supplier communication.",
-        "Monitored stock levels and supported logistics operations."
-      ],
-      "achievements": [
+        "Monitored stock levels and supported logistics operations.",
         "Improved supplier coordination processes and inventory management.",
         "Ensured timely delivery and cost-efficient supply chain operations."
       ],
@@ -334,9 +299,7 @@
       "endDate": "2024-12-01",
       "description": [
         "Contributed to humanitarian and health awareness initiatives.",
-        "Participated in community outreach and emergency preparedness programs."
-      ],
-      "achievements": [
+        "Participated in community outreach and emergency preparedness programs.",
         "Certified facilitator in the Humanitarian Values and Principles Program.",
         "Certified facilitator in the Youth and Health Program.",
         "Member of the Blood Drive Committee supporting national blood donation campaigns.",
@@ -353,12 +316,7 @@
       "startDate": "2019-07-01",
       "endDate": "2019-08-01",
       "description": [
-        "Explored statistical analysis and data science fundamentals.",
-        "Developed small-scale recommendation systems using Python."
-      ],
-      "achievements": [
-        "Applied statistical analysis to real-world datasets.",
-        "Built prototype recommendation systems and data analysis workflows."
+        "Explored statistical analysis and data science fundamentals."
       ],
       "skills": ["Python", "Data Science"]
     }
@@ -427,7 +385,7 @@
       "description": "Specialization in applied machine learning, knowledge systems, and scalable AI infrastructure."
     },
     {
-      "degree": "Bachelor of Science in Mathematics — Data Science",
+      "degree": "Bachelor of Science in Mathematics and Data Science",
       "institution": "Saint Joseph University of Beirut — Faculty of Science",
       "location": "Lebanon",
       "startDate": "2021-09-01",
