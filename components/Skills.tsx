@@ -53,7 +53,6 @@ const Skills: FC<Props> = ({ skills }) => {
           <SectionHeader
             eyebrow="Capabilities"
             heading="Skills"
-            index="03 / 07"
           />
         </Reveal>
 

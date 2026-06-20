@@ -17,14 +17,14 @@ interface Props {
 
 const Workshops: FC<Props> = ({ workshops }) => {
   return (
-    <section id="workshops" className="py-24 px-6 border-t border-hairline">
+    <section id="workshops" className="py-24 px-6 bg-ink border-t border-white/10">
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <SectionHeader
             eyebrow="Teaching"
             heading="Workshops"
             sub="Hands-on AI sessions across universities and organisations."
-            index="05 / 07"
+            variant="dark"
           />
         </Reveal>
 
@@ -35,7 +35,7 @@ const Workshops: FC<Props> = ({ workshops }) => {
                 href={w.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block border-[1.5px] border-ink rounded-[6px] overflow-hidden bg-paper hover:border-green-deep motion-safe:hover:-translate-y-[5px] motion-safe:transition-all duration-300 ease-brand focus-ring"
+                className="group block border-[1.5px] border-[#333333] rounded-[6px] overflow-hidden bg-[#1a1a1a] hover:border-green motion-safe:hover:-translate-y-[5px] motion-safe:transition-all duration-300 ease-brand focus-ring"
               >
                 <div className="relative aspect-video overflow-hidden">
                   <Image
@@ -47,13 +47,13 @@ const Workshops: FC<Props> = ({ workshops }) => {
                   />
                 </div>
                 <div className="p-5">
-                  <p className="text-[10px] font-heading font-semibold uppercase tracking-[0.14em] text-green-deep mb-1.5">
+                  <p className="text-[10px] font-heading font-semibold uppercase tracking-[0.14em] text-green mb-1.5">
                     {w.organizer}
                   </p>
-                  <h3 className="font-heading font-semibold text-[15px] tracking-[-0.01em] text-ink mb-2">
+                  <h3 className="font-heading font-semibold text-[15px] tracking-[-0.01em] text-paper mb-2">
                     {w.title}
                   </h3>
-                  <p className="text-[13px] text-muted leading-relaxed">{w.description}</p>
+                  <p className="text-[13px] text-faint leading-relaxed">{w.description}</p>
                 </div>
               </a>
             </Reveal>

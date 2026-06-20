@@ -26,7 +26,7 @@ export default function Home() {
 
         <Marquee />
 
-        <Reveal>
+        <Reveal className="bg-ink">
           <About
             bio={personal.bio}
             role={personal.role}
@@ -42,7 +42,7 @@ export default function Home() {
           <Experience experience={experience} />
         </Reveal>
 
-        <Reveal delay={0.1}>
+        <Reveal delay={0.1} className="bg-ink">
           <Education education={education} />
         </Reveal>
 
@@ -50,7 +50,7 @@ export default function Home() {
           <Work projects={projects} />
         </Reveal>
 
-        <Reveal delay={0.1}>
+        <Reveal delay={0.1} className="bg-ink">
           <Workshops workshops={workshops} />
         </Reveal>
 
@@ -58,7 +58,7 @@ export default function Home() {
           <Blog posts={blogs} />
         </Reveal>
 
-        <Reveal delay={0.1}>
+        <Reveal delay={0.1} className="bg-ink">
           <Contributions contributions={contributions} />
         </Reveal>
       </main>

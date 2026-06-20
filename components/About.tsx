@@ -19,20 +19,20 @@ interface Props {
 
 const About: FC<Props> = ({ bio, role, displayName, profileImage, socials }) => {
   return (
-    <section id="about" className="py-24 px-6 border-t border-hairline">
+    <section id="about" className="py-24 px-6 bg-ink border-t border-white/10">
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <SectionHeader
             eyebrow="Who I am"
             heading="About"
-            index="01 / 07"
+            variant="dark"
           />
         </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Profile image — ink offset frame */}
+          {/* Profile image — offset frame */}
           <Reveal className="relative inline-block w-full max-w-sm mx-auto lg:mx-0 order-last lg:order-first">
-            <div className="absolute -bottom-3 -right-3 w-full h-full border-[1.5px] border-ink rounded-[6px]" />
+            <div className="absolute -bottom-3 -right-3 w-full h-full border-[1.5px] border-white/20 rounded-[6px]" />
             <div className="relative z-10 rounded-[6px] overflow-hidden aspect-square">
               <Image
                 src={profileImage}
@@ -47,14 +47,14 @@ const About: FC<Props> = ({ bio, role, displayName, profileImage, socials }) => 
           {/* Info */}
           <Reveal delay={0.1}>
             <div>
-              <p className="text-[11px] font-heading font-semibold uppercase tracking-[0.16em] text-green-deep mb-2">
+              <p className="text-[11px] font-heading font-semibold uppercase tracking-[0.16em] text-green mb-2">
                 {role}
               </p>
-              <h3 className="font-heading font-semibold text-[clamp(24px,3vw,32px)] tracking-[-0.03em] text-ink mb-5">
+              <h3 className="font-heading font-semibold text-[clamp(24px,3vw,32px)] tracking-[-0.03em] text-paper mb-5">
                 {displayName}
               </h3>
 
-              <p className="text-[15px] text-muted leading-[1.7] mb-7 max-w-lg">
+              <p className="text-[15px] text-faint leading-[1.7] mb-7 max-w-lg">
                 {bio}
               </p>
 
@@ -77,10 +77,10 @@ const About: FC<Props> = ({ bio, role, displayName, profileImage, socials }) => 
                     href={s.link}
                     target={s.link.startsWith('mailto') ? undefined : '_blank'}
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-4 py-2 rounded-[4px] border-[1.5px] border-hairline text-[12px] font-heading font-medium text-ink hover:border-green-deep hover:text-green-deep transition-colors duration-200 ease-brand focus-ring"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-[4px] border-[1.5px] border-white/10 text-[12px] font-heading font-medium text-paper/70 hover:border-green hover:text-green transition-colors duration-200 ease-brand focus-ring"
                   >
                     {s.name}
-                    <span className="text-faint text-[10px]">↗</span>
+                    <span className="text-[10px] opacity-50">↗</span>
                   </a>
                 ))}
               </div>

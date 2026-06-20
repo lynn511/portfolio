@@ -190,7 +190,6 @@ const Work: FC<Props> = ({ projects }) => {
             eyebrow="Projects"
             heading="Selected Work"
             sub="Things I've built and shipped."
-            index="04 / 07"
           />
         </Reveal>
 

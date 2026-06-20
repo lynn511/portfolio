@@ -35,7 +35,6 @@ const Blog: FC<Props> = ({ posts }) => {
             eyebrow="Writing"
             heading="Blog"
             sub="Technical writing on AI, MLOps, and systems."
-            index="06 / 07"
           />
         </Reveal>
 

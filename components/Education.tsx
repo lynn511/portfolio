@@ -22,14 +22,14 @@ function fmtYear(d: string): string {
 
 const Education: FC<Props> = ({ education }) => {
   return (
-    <section id="education" className="py-24 px-6 border-t border-hairline">
+    <section id="education" className="py-24 px-6 bg-ink border-t border-white/10">
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <SectionHeader
             eyebrow="Academic Background"
             heading="Education"
             sub="Degrees and academic training."
-            index="03 / 07"
+            variant="dark"
           />
         </Reveal>
 
@@ -40,7 +40,7 @@ const Education: FC<Props> = ({ education }) => {
 
             return (
               <Reveal key={entry.degree} delay={i * 0.08}>
-                <article className="relative border-[1.5px] border-ink rounded-[6px] p-7 bg-paper hover:border-green-deep motion-safe:hover:-translate-y-[5px] motion-safe:transition-all duration-300 ease-brand overflow-hidden h-full">
+                <article className="relative border-[1.5px] border-[#333333] rounded-[6px] p-7 bg-[#1a1a1a] hover:border-green motion-safe:hover:-translate-y-[5px] motion-safe:transition-all duration-300 ease-brand overflow-hidden h-full">
                   {/* Green left accent for current degree */}
                   {isCurrent && (
                     <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-green" />
@@ -48,7 +48,7 @@ const Education: FC<Props> = ({ education }) => {
 
                   {/* Date badge */}
                   <div className="flex items-center gap-2 mb-5">
-                    <span className="inline-flex items-center gap-1.5 text-[10px] font-heading font-semibold uppercase tracking-[0.12em] px-3 py-1 rounded-[3px] bg-ink/5 text-ink">
+                    <span className="inline-flex items-center gap-1.5 text-[10px] font-heading font-semibold uppercase tracking-[0.12em] px-3 py-1 rounded-[3px] bg-white/10 text-paper">
                       {isCurrent && (
                         <span className="w-1.5 h-1.5 rounded-full bg-green animate-livePulse flex-shrink-0" />
                       )}
@@ -57,12 +57,12 @@ const Education: FC<Props> = ({ education }) => {
                   </div>
 
                   {/* Institution */}
-                  <p className="text-[10px] font-heading font-semibold uppercase tracking-[0.14em] text-green-deep mb-2">
+                  <p className="text-[10px] font-heading font-semibold uppercase tracking-[0.14em] text-green mb-2">
                     {entry.institution}
                   </p>
 
                   {/* Degree */}
-                  <h3 className="font-heading font-semibold text-[18px] tracking-[-0.02em] leading-snug text-ink mb-3">
+                  <h3 className="font-heading font-semibold text-[18px] tracking-[-0.02em] leading-snug text-paper mb-3">
                     {entry.degree}
                   </h3>
 
@@ -70,7 +70,7 @@ const Education: FC<Props> = ({ education }) => {
                   <p className="text-[12px] text-faint mb-3">{entry.location}</p>
 
                   {/* Description */}
-                  <p className="text-[13px] text-muted leading-[1.75]">{entry.description}</p>
+                  <p className="text-[13px] text-faint leading-[1.75]">{entry.description}</p>
                 </article>
               </Reveal>
             )

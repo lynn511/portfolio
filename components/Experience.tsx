@@ -139,7 +139,6 @@ export default function Experience({ experience }: { experience: ExperienceEntry
             eyebrow="Career"
             heading="Experience"
             sub="Where I've worked and what I've built."
-            index="02 / 07"
           />
         </Reveal>
 

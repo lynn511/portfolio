@@ -37,11 +37,6 @@ export default function Hero({ role }: { name: string; role: string }) {
       className="relative min-h-[70vh] flex flex-col justify-center overflow-hidden bg-paper"
       onMouseMove={handleMouseMove}
     >
-      {/* Section index — top right */}
-      <span className="absolute top-24 right-8 text-[11px] font-heading font-semibold tracking-[0.12em] text-faint z-10 hidden sm:block select-none">
-        01 / 07
-      </span>
-
       {/* ── Diagonal decorative blocks ── */}
 
       {/* Block 1 — large green, entrance from right */}
