@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import type { FC } from 'react'
-import SectionHeading from './SectionHeading'
+import SectionHeader from './SectionHeading'
+import Reveal from './ScrollReveal'
 
 interface Workshop {
   title: string
@@ -16,44 +17,46 @@ interface Props {
 
 const Workshops: FC<Props> = ({ workshops }) => {
   return (
-    <section id="workshops" className="py-24 px-6 bg-gray-50 dark:bg-white/5">
+    <section id="workshops" className="py-24 px-6 border-t border-hairline">
       <div className="max-w-6xl mx-auto">
-        <SectionHeading
-          eyebrow="Teaching"
-          heading="Workshops"
-          sub="Hands-on AI sessions across universities and organisations."
-        />
+        <Reveal>
+          <SectionHeader
+            eyebrow="Teaching"
+            heading="Workshops"
+            sub="Hands-on AI sessions across universities and organisations."
+            index="05 / 07"
+          />
+        </Reveal>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(280px,100%),1fr))] gap-8">
-          {workshops.map((w) => (
-            <a
-              key={w.title}
-              href={w.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="group block bg-white dark:bg-white/5 rounded-2xl overflow-hidden border-2 border-transparent hover:border-brand-orange transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl dark:hover:shadow-black/40"
-            >
-              <div className="relative aspect-video overflow-hidden">
-                <Image
-                  src={w.photo}
-                  alt={w.title}
-                  fill
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
-              <div className="p-5">
-                <p className="text-xs font-semibold text-brand-orange uppercase tracking-widest mb-1">
-                  {w.organizer}
-                </p>
-                <h3 className="font-heading font-bold text-gray-900 dark:text-white mb-2">
-                  {w.title}
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-blue-100 leading-relaxed">
-                  {w.description}
-                </p>
-              </div>
-            </a>
+        <div className="grid grid-cols-[repeat(auto-fit,minmax(min(280px,100%),1fr))] gap-5">
+          {workshops.map((w, i) => (
+            <Reveal key={w.title} delay={i * 0.07}>
+              <a
+                href={w.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group block border-[1.5px] border-ink rounded-[6px] overflow-hidden bg-paper hover:border-green-deep motion-safe:hover:-translate-y-[5px] motion-safe:transition-all duration-300 ease-brand focus-ring"
+              >
+                <div className="relative aspect-video overflow-hidden">
+                  <Image
+                    src={w.photo}
+                    alt={w.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover motion-safe:group-hover:scale-[1.04] motion-safe:transition-transform duration-500 ease-brand"
+                  />
+                </div>
+                <div className="p-5">
+                  <p className="text-[10px] font-heading font-semibold uppercase tracking-[0.14em] text-green-deep mb-1.5">
+                    {w.organizer}
+                  </p>
+                  <h3 className="font-heading font-semibold text-[15px] tracking-[-0.01em] text-ink mb-2">
+                    {w.title}
+                  </h3>
+                  <p className="text-[13px] text-muted leading-relaxed">{w.description}</p>
+                </div>
+              </a>
+            </Reveal>
           ))}
         </div>
       </div>

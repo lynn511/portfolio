@@ -1,38 +1,31 @@
 'use client'
-import { useEffect, useRef, type ReactNode } from 'react'
+import { useReducedMotion, motion } from 'motion/react'
+import type { ReactNode } from 'react'
 
 interface Props {
   children: ReactNode
   delay?: number
   className?: string
+  /** Pass y=0 to get a pure opacity reveal */
+  y?: number
 }
 
-export default function ScrollReveal({ children, delay = 0, className = '' }: Props) {
-  const ref = useRef<HTMLDivElement>(null)
-
-  useEffect(() => {
-    const el = ref.current
-    if (!el) return
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => {
-            el.classList.add('revealed')
-          }, delay)
-          observer.unobserve(el)
-        }
-      },
-      { threshold: 0.1 }
-    )
-
-    observer.observe(el)
-    return () => observer.disconnect()
-  }, [delay])
+export default function Reveal({ children, delay = 0, className = '', y = 18 }: Props) {
+  const reduced = useReducedMotion()
 
   return (
-    <div ref={ref} className={`reveal-on-scroll ${className}`}>
+    <motion.div
+      className={className}
+      initial={{ opacity: 0, y: reduced ? 0 : y }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{
+        duration: reduced ? 0.01 : 0.6,
+        delay: reduced ? 0 : delay,
+        ease: [0.2, 0.7, 0.2, 1],
+      }}
+    >
       {children}
-    </div>
+    </motion.div>
   )
 }

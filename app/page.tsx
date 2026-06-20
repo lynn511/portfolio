@@ -6,8 +6,10 @@ import Education from '@/components/Education'
 import Experience from '@/components/Experience'
 import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
+import Marquee from '@/components/Marquee'
 import Nav from '@/components/Nav'
-import ScrollReveal from '@/components/ScrollReveal'
+import Reveal from '@/components/ScrollReveal'
+import Skills from '@/components/Skills'
 import Work from '@/components/Work'
 import Workshops from '@/components/Workshops'
 
@@ -22,40 +24,43 @@ export default function Home() {
       <main>
         <Hero name={personal.displayName} role={personal.role} />
 
-        <ScrollReveal>
+        <Marquee />
+
+        <Reveal>
           <About
             bio={personal.bio}
             role={personal.role}
             displayName={personal.displayName}
             profileImage={personal.profileImage}
-            skills={skills}
             socials={socials}
           />
-        </ScrollReveal>
+        </Reveal>
 
-        <ScrollReveal delay={100}>
+        <Skills skills={skills} />
+
+        <Reveal delay={0.1}>
           <Experience experience={experience} />
-        </ScrollReveal>
+        </Reveal>
 
-        <ScrollReveal delay={100}>
+        <Reveal delay={0.1}>
           <Education education={education} />
-        </ScrollReveal>
+        </Reveal>
 
-        <ScrollReveal delay={100}>
+        <Reveal delay={0.1}>
           <Work projects={projects} />
-        </ScrollReveal>
+        </Reveal>
 
-        <ScrollReveal delay={100}>
+        <Reveal delay={0.1}>
           <Workshops workshops={workshops} />
-        </ScrollReveal>
+        </Reveal>
 
-        <ScrollReveal delay={100}>
+        <Reveal delay={0.1}>
           <Blog posts={blogs} />
-        </ScrollReveal>
+        </Reveal>
 
-        <ScrollReveal delay={100}>
+        <Reveal delay={0.1}>
           <Contributions contributions={contributions} />
-        </ScrollReveal>
+        </Reveal>
       </main>
 
       <Footer displayName={personal.displayName} socials={socials} />

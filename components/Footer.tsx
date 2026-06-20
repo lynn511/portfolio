@@ -17,12 +17,15 @@ const Footer: FC<Props> = ({ displayName, socials }) => {
   )
 
   return (
-    <footer className="py-10 px-6 border-t border-gray-100 dark:border-white/10">
-      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-gray-400 dark:text-blue-300">
-          © {year} {displayName}
+    <footer className="bg-ink border-t border-paper/10 py-10 px-6">
+      <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-5">
+        {/* Brand */}
+        <p className="font-heading font-semibold text-[14px] tracking-[-0.02em] text-paper/80">
+          lynn<span className="text-green">/</span>el moussaoui
+          <span className="ml-3 text-faint font-normal text-[12px]">© {year}</span>
         </p>
 
+        {/* Social links */}
         <div className="flex flex-wrap justify-center sm:justify-end items-center gap-x-6 gap-y-2">
           {footerLinks.map((s) => (
             <a
@@ -30,7 +33,7 @@ const Footer: FC<Props> = ({ displayName, socials }) => {
               href={s.link}
               target={s.link.startsWith('mailto') ? undefined : '_blank'}
               rel="noopener noreferrer"
-              className="text-sm text-gray-500 dark:text-blue-200 hover:text-brand-orange transition-colors py-1"
+              className="green-sweep text-[12px] font-heading font-medium text-paper/50 hover:text-paper transition-colors duration-200 ease-brand py-1 focus-ring"
             >
               {s.name}
             </a>

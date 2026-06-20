@@ -1,6 +1,7 @@
 'use client'
 import { useState } from 'react'
-import SectionHeading from './SectionHeading'
+import SectionHeader from './SectionHeading'
+import Reveal from './ScrollReveal'
 
 interface ExperienceEntry {
   id: string
@@ -19,34 +20,24 @@ function fmtDate(d: string): string {
   return new Date(y, m - 1).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })
 }
 
-function ExperienceRow({
-  entry,
-  isLast,
-}: {
-  entry: ExperienceEntry
-  isLast: boolean
-}) {
+function ExperienceRow({ entry, isLast }: { entry: ExperienceEntry; isLast: boolean }) {
   const [open, setOpen] = useState(false)
   const isCurrent = entry.endDate === 'Present'
   const hasMore = entry.description.length > 1 || entry.skills.length > 0
   const dateStr = `${fmtDate(entry.startDate)} – ${fmtDate(entry.endDate)}`
 
-  /* Expandable bullets + skills, shared between mobile and desktop */
   const expandable = hasMore ? (
     <>
       <div
-        className={`overflow-hidden transition-[max-height] duration-500 ease-in-out ${
+        className={`overflow-hidden transition-[max-height] duration-500 ease-brand ${
           open ? 'max-h-[600px]' : 'max-h-0'
         }`}
       >
         {entry.description.length > 1 && (
           <ul className="mt-3 space-y-1.5">
             {entry.description.slice(1).map((d, i) => (
-              <li
-                key={i}
-                className="flex gap-2 text-sm text-gray-600 dark:text-blue-100 leading-relaxed"
-              >
-                <span className="text-brand-orange flex-shrink-0 mt-0.5">·</span>
+              <li key={i} className="flex gap-2 text-[13px] text-muted leading-relaxed">
+                <span className="text-green flex-shrink-0 mt-0.5">·</span>
                 <span>{d}</span>
               </li>
             ))}
@@ -57,7 +48,7 @@ function ExperienceRow({
             {entry.skills.map((s) => (
               <span
                 key={s}
-                className="text-[11px] px-2 py-0.5 rounded-full bg-gray-100 dark:bg-white/10 text-gray-500 dark:text-blue-200"
+                className="text-[10px] px-2 py-0.5 rounded-[3px] border border-hairline font-heading font-semibold uppercase tracking-[0.1em] text-faint"
               >
                 {s}
               </span>
@@ -67,7 +58,7 @@ function ExperienceRow({
       </div>
       <button
         onClick={() => setOpen((o) => !o)}
-        className="mt-2.5 text-xs text-gray-400 dark:text-blue-300 hover:text-brand-orange transition-colors"
+        className="mt-3 text-[11px] font-heading font-semibold text-muted hover:text-green-deep transition-colors focus-ring"
       >
         {open ? 'See less ↑' : 'See more ↓'}
       </button>
@@ -77,68 +68,54 @@ function ExperienceRow({
   const cardContent = (
     <>
       <div className="flex flex-wrap items-center gap-2 mb-0.5">
-        <span className="font-heading font-bold text-gray-900 dark:text-white">
-          {entry.company}
-        </span>
-        <span className="text-[11px] px-2 py-0.5 rounded-full bg-brand-blue/10 dark:bg-white/10 text-brand-blue dark:text-blue-200 font-medium">
+        <span className="font-heading font-semibold text-[15px] text-ink">{entry.company}</span>
+        <span className="text-[10px] px-2 py-0.5 rounded-[3px] border border-hairline font-heading font-semibold uppercase tracking-[0.1em] text-faint">
           {entry.location}
         </span>
       </div>
-      <p className="text-xs font-semibold uppercase tracking-widest text-brand-orange mb-2">
+      <p className="text-[10px] font-heading font-semibold uppercase tracking-[0.14em] text-green-deep mb-2">
         {entry.position}
       </p>
-      <p className="text-sm text-gray-600 dark:text-blue-100 leading-relaxed">
-        {entry.description[0]}
-      </p>
+      <p className="text-[13px] text-muted leading-relaxed">{entry.description[0]}</p>
       {expandable}
     </>
   )
 
+  const dotClass = isCurrent
+    ? 'bg-green animate-livePulse'
+    : 'bg-ink'
+
   return (
     <>
-      {/* ── Mobile layout (<768 px): dot + date above content ── */}
+      {/* Mobile */}
       <div className="md:hidden flex gap-3 pb-8">
         <div className="flex flex-col items-center pt-1 flex-shrink-0">
-          <div
-            className={`w-2 h-2 rounded-full bg-brand-orange ${
-              isCurrent ? 'animate-pulse' : ''
-            }`}
-          />
-          {!isLast && <div className="flex-1 w-px bg-brand-orange/25 mt-1" />}
+          <div className={`w-2 h-2 rounded-full flex-shrink-0 ${dotClass}`} />
+          {!isLast && <div className="flex-1 w-px bg-hairline mt-1" />}
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-xs text-gray-400 dark:text-blue-300 tabular-nums mb-2">
-            {dateStr}
-          </p>
-          <div className="rounded-xl p-3 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors duration-300">
-            {cardContent}
-          </div>
+          <p className="text-[11px] font-heading text-muted tabular-nums mb-2">{dateStr}</p>
+          <div className="p-3">{cardContent}</div>
         </div>
       </div>
 
-      {/* ── Desktop layout (≥768 px): 3-column timeline grid ── */}
+      {/* Desktop */}
       <div className="hidden md:grid grid-cols-[96px_20px_1fr] gap-x-5">
         <div className="text-right pt-1 pb-10">
-          <span className="text-xs text-gray-400 dark:text-blue-300 tabular-nums leading-[1.8]">
+          <span className="text-[11px] font-heading text-muted tabular-nums leading-[1.8]">
             {fmtDate(entry.startDate)}
             <br />
-            <span className="opacity-60">–</span>
+            <span className="opacity-50">–</span>
             <br />
             {fmtDate(entry.endDate)}
           </span>
         </div>
         <div className="flex flex-col items-center pb-10">
-          <div
-            className={`w-2 h-2 rounded-full bg-brand-orange mt-1.5 flex-shrink-0 relative z-10 ${
-              isCurrent ? 'animate-pulse' : ''
-            }`}
-          />
-          <div
-            className={`flex-1 w-px bg-brand-orange/25 mt-1 ${isLast ? 'opacity-0' : ''}`}
-          />
+          <div className={`w-2 h-2 rounded-full mt-1.5 flex-shrink-0 relative z-10 ${dotClass}`} />
+          <div className={`flex-1 w-px bg-hairline mt-1 ${isLast ? 'opacity-0' : ''}`} />
         </div>
         <div className="pb-10">
-          <div className="rounded-xl p-4 hover:bg-gray-50 dark:hover:bg-white/5 transition-colors duration-300">
+          <div className="p-4 rounded-[4px] hover:bg-hairline/40 transition-colors duration-200">
             {cardContent}
           </div>
         </div>
@@ -149,57 +126,54 @@ function ExperienceRow({
 
 const VISIBLE_COUNT = 4
 
-export default function Experience({
-  experience,
-}: {
-  experience: ExperienceEntry[]
-}) {
+export default function Experience({ experience }: { experience: ExperienceEntry[] }) {
   const [showAll, setShowAll] = useState(false)
   const visible = experience.slice(0, VISIBLE_COUNT)
   const hidden = experience.slice(VISIBLE_COUNT)
 
   return (
-    <section id="experience" className="py-24 px-6">
+    <section id="experience" className="py-24 px-6 border-t border-hairline">
       <div className="max-w-6xl mx-auto">
-        <SectionHeading
-          eyebrow="Career"
-          heading="Experience"
-          sub="Where I've worked and what I've built."
-        />
+        <Reveal>
+          <SectionHeader
+            eyebrow="Career"
+            heading="Experience"
+            sub="Where I've worked and what I've built."
+            index="02 / 07"
+          />
+        </Reveal>
 
         <div>
           {visible.map((entry, i) => (
-            <ExperienceRow
-              key={entry.id}
-              entry={entry}
-              isLast={i === visible.length - 1 && hidden.length === 0}
-            />
+            <Reveal key={entry.id} delay={i * 0.07}>
+              <ExperienceRow
+                entry={entry}
+                isLast={i === visible.length - 1 && hidden.length === 0}
+              />
+            </Reveal>
           ))}
 
           {hidden.length > 0 && (
             <>
               <div
-                className={`overflow-hidden transition-[max-height] duration-700 ease-in-out ${
+                className={`overflow-hidden transition-[max-height] duration-700 ease-brand ${
                   showAll ? 'max-h-[4000px]' : 'max-h-0'
                 }`}
               >
                 {hidden.map((entry, i) => (
-                  <ExperienceRow
-                    key={entry.id}
-                    entry={entry}
-                    isLast={i === hidden.length - 1}
-                  />
+                  <Reveal key={entry.id} delay={i * 0.07}>
+                    <ExperienceRow entry={entry} isLast={i === hidden.length - 1} />
+                  </Reveal>
                 ))}
               </div>
 
-              {/* Toggle button — aligned under content on desktop, plain on mobile */}
               <div className="md:grid md:grid-cols-[96px_20px_1fr] md:gap-x-5 pb-4">
                 <div className="hidden md:block" />
                 <div className="hidden md:block" />
                 <div>
                   <button
                     onClick={() => setShowAll((s) => !s)}
-                    className="text-sm font-medium px-5 py-2 rounded border border-brand-orange text-brand-orange hover:bg-brand-orange hover:text-white transition-colors"
+                    className="text-[11px] font-heading font-semibold uppercase tracking-[0.1em] px-5 py-2 rounded-[4px] border-[1.5px] border-ink text-ink hover:bg-ink hover:text-paper transition-colors duration-200 ease-brand focus-ring"
                   >
                     {showAll ? 'Show less ↑' : 'Show all experience ↓'}
                   </button>

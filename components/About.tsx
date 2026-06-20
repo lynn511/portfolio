@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import type { FC } from 'react'
-import SectionHeading from './SectionHeading'
+import SectionHeader from './SectionHeading'
+import Reveal from './ScrollReveal'
 
 interface Social {
   name: string
@@ -8,41 +9,31 @@ interface Social {
   link: string
 }
 
-interface Skill {
-  name: string
-}
-
 interface Props {
   bio: string
   role: string
   displayName: string
   profileImage: string
-  skills: Skill[]
   socials: Social[]
 }
 
-const socialIcons: Record<string, string> = {
-  Github: 'GH',
-  LinkedIn: 'LI',
-  Medium: 'ME',
-  Gmail: '@',
-}
-
-const About: FC<Props> = ({ bio, role, displayName, profileImage, skills, socials }) => {
+const About: FC<Props> = ({ bio, role, displayName, profileImage, socials }) => {
   return (
-    <section id="about" className="py-24 px-6">
+    <section id="about" className="py-24 px-6 border-t border-hairline">
       <div className="max-w-6xl mx-auto">
-        <SectionHeading
-          eyebrow="Who I am"
-          heading="About"
-          sub="Builder at the intersection of AI, systems, and people."
-        />
+        <Reveal>
+          <SectionHeader
+            eyebrow="Who I am"
+            heading="About"
+            index="01 / 07"
+          />
+        </Reveal>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
-          {/* Profile image with offset orange border frame */}
-          <div className="relative inline-block w-full max-w-sm mx-auto lg:mx-0 order-last lg:order-first">
-            <div className="absolute -bottom-4 -right-4 w-full h-full border-2 border-brand-orange rounded-2xl" />
-            <div className="relative z-10 rounded-2xl overflow-hidden aspect-square">
+          {/* Profile image — ink offset frame */}
+          <Reveal className="relative inline-block w-full max-w-sm mx-auto lg:mx-0 order-last lg:order-first">
+            <div className="absolute -bottom-3 -right-3 w-full h-full border-[1.5px] border-ink rounded-[6px]" />
+            <div className="relative z-10 rounded-[6px] overflow-hidden aspect-square">
               <Image
                 src={profileImage}
                 alt={displayName}
@@ -51,67 +42,50 @@ const About: FC<Props> = ({ bio, role, displayName, profileImage, skills, social
                 className="object-cover"
               />
             </div>
-          </div>
+          </Reveal>
 
           {/* Info */}
-          <div>
-            <p className="text-sm font-semibold text-brand-orange uppercase tracking-widest mb-2">
-              {role}
-            </p>
-            <h3 className="font-heading text-3xl font-black text-gray-900 dark:text-white mb-5">
-              {displayName}
-            </h3>
-
-            <p className="text-gray-600 dark:text-blue-100 leading-relaxed mb-6 max-w-lg">
-              {bio}
-            </p>
-
-            {/* CV download button */}
-            <a
-              href="/lynn-cv.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-brand-orange text-white font-medium hover:bg-orange-700 transition-colors mb-8"
-            >
-              <span className="text-base leading-none">↓</span>
-              Download CV
-            </a>
-
-            {/* Skills */}
-            <div className="mb-8">
-              <p className="text-xs font-semibold text-gray-400 dark:text-blue-300 uppercase tracking-widest mb-3">
-                Skills
+          <Reveal delay={0.1}>
+            <div>
+              <p className="text-[11px] font-heading font-semibold uppercase tracking-[0.16em] text-green-deep mb-2">
+                {role}
               </p>
-              <div className="flex flex-wrap gap-2">
-                {skills.map((s) => (
-                  <span
+              <h3 className="font-heading font-semibold text-[clamp(24px,3vw,32px)] tracking-[-0.03em] text-ink mb-5">
+                {displayName}
+              </h3>
+
+              <p className="text-[15px] text-muted leading-[1.7] mb-7 max-w-lg">
+                {bio}
+              </p>
+
+              {/* CV button */}
+              <a
+                href="/lynn-cv.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-5 py-2.5 rounded-[4px] bg-green text-ink text-[11px] font-heading font-semibold uppercase tracking-[0.1em] hover:bg-green-deep transition-colors duration-200 ease-brand active:scale-95 focus-ring mb-8"
+              >
+                <span className="text-[10px] leading-none">↓</span>
+                Download CV
+              </a>
+
+              {/* Socials */}
+              <div className="flex flex-wrap gap-2.5">
+                {socials.map((s) => (
+                  <a
                     key={s.name}
-                    className="text-sm px-3 py-1.5 rounded-full bg-brand-blue/10 dark:bg-white/10 text-brand-blue dark:text-blue-200 font-medium"
+                    href={s.link}
+                    target={s.link.startsWith('mailto') ? undefined : '_blank'}
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 px-4 py-2 rounded-[4px] border-[1.5px] border-hairline text-[12px] font-heading font-medium text-ink hover:border-green-deep hover:text-green-deep transition-colors duration-200 ease-brand focus-ring"
                   >
                     {s.name}
-                  </span>
+                    <span className="text-faint text-[10px]">↗</span>
+                  </a>
                 ))}
               </div>
             </div>
-
-            {/* Socials */}
-            <div className="flex flex-wrap gap-3">
-              {socials.map((s) => (
-                <a
-                  key={s.name}
-                  href={s.link}
-                  target={s.link.startsWith('mailto') ? undefined : '_blank'}
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-gray-200 dark:border-white/20 hover:border-brand-orange dark:hover:border-brand-orange hover:text-brand-orange transition-colors text-sm text-gray-600 dark:text-blue-100"
-                >
-                  <span className="text-xs font-bold text-brand-blue dark:text-blue-300">
-                    {socialIcons[s.name] ?? s.name[0]}
-                  </span>
-                  {s.username}
-                </a>
-              ))}
-            </div>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>
