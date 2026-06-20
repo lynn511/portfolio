@@ -40,11 +40,10 @@ const Education: FC<Props> = ({ education }) => {
 
             return (
               <Reveal key={entry.degree} delay={i * 0.08}>
-                <article className="relative border-[1.5px] border-[#333333] rounded-[6px] p-7 bg-[#1a1a1a] hover:border-green motion-safe:hover:-translate-y-[5px] motion-safe:transition-all duration-300 ease-brand overflow-hidden h-full">
-                  {/* Green left accent for current degree */}
-                  {isCurrent && (
-                    <div className="absolute left-0 top-0 bottom-0 w-[3px] bg-green" />
-                  )}
+                <article
+                  className="relative border-[1.5px] border-[#333333] p-7 bg-[#1a1a1a] hover:border-green motion-safe:hover:-translate-y-[5px] motion-safe:transition-all duration-300 ease-brand overflow-hidden h-full"
+                  style={i === 0 ? { borderLeftWidth: '4px', borderLeftColor: '#00C24A', borderTopLeftRadius: 0, borderBottomLeftRadius: 0, borderTopRightRadius: '6px', borderBottomRightRadius: '6px' } : { borderRadius: '6px' }}
+                >
 
                   {/* Date badge */}
                   <div className="flex items-center gap-2 mb-5">

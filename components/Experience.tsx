@@ -95,7 +95,7 @@ function ExperienceRow({ entry, isLast }: { entry: ExperienceEntry; isLast: bool
         </div>
         <div className="flex-1 min-w-0">
           <p className="text-[11px] font-heading text-muted tabular-nums mb-2">{dateStr}</p>
-          <div className="p-3">{cardContent}</div>
+          <div className={`p-3 ${isCurrent ? 'border-l-4 border-l-[#00C24A]' : ''}`}>{cardContent}</div>
         </div>
       </div>
 
@@ -115,7 +115,7 @@ function ExperienceRow({ entry, isLast }: { entry: ExperienceEntry; isLast: bool
           <div className={`flex-1 w-px bg-hairline mt-1 ${isLast ? 'opacity-0' : ''}`} />
         </div>
         <div className="pb-10">
-          <div className="p-4 rounded-[4px] hover:bg-hairline/40 transition-colors duration-200">
+          <div className={`p-4 hover:bg-hairline/40 transition-colors duration-200 ${isCurrent ? 'border-l-4 border-l-[#00C24A] rounded-r-[4px]' : 'rounded-[4px]'}`}>
             {cardContent}
           </div>
         </div>

@@ -37,9 +37,11 @@ const Contributions: FC<Props> = ({ contributions }) => {
 
             return (
               <Reveal key={c.title} delay={i * 0.08}>
-                <article className="group relative flex flex-col sm:flex-row bg-transparent hover:bg-white/5 transition-colors duration-300">
-                  {/* Green left border grows on hover */}
-                  <div className="absolute top-0 left-0 w-[3px] h-full bg-green origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-400 ease-brand" />
+                <article className={`group relative flex flex-col sm:flex-row bg-transparent hover:bg-white/5 transition-colors duration-300 ${isResearch ? 'border-l-4 border-l-[#00C24A]' : ''}`}>
+                  {/* Hover green bar — only for non-research entries */}
+                  {!isResearch && (
+                    <div className="absolute top-0 left-0 w-[3px] h-full bg-green origin-bottom scale-y-0 group-hover:scale-y-100 transition-transform duration-400 ease-brand" />
+                  )}
 
                   {/* Image */}
                   <div className="relative w-full sm:w-[260px] flex-shrink-0 h-[200px] sm:h-auto overflow-hidden">

@@ -45,7 +45,8 @@ const Blog: FC<Props> = ({ posts }) => {
                 href={post.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex flex-col border-[1.5px] border-ink rounded-[6px] overflow-hidden bg-paper hover:border-green-deep motion-safe:hover:-translate-y-[5px] motion-safe:transition-all duration-300 ease-brand h-full focus-ring"
+                className="group flex flex-col border-[1.5px] border-ink overflow-hidden bg-paper hover:border-green-deep motion-safe:hover:-translate-y-[5px] motion-safe:transition-all duration-300 ease-brand h-full focus-ring"
+                style={i === 0 ? { borderLeftWidth: '4px', borderLeftColor: '#00C24A', borderTopLeftRadius: 0, borderBottomLeftRadius: 0, borderTopRightRadius: '6px', borderBottomRightRadius: '6px' } : { borderRadius: '6px' }}
               >
                 {/* Cover image */}
                 <div className="relative aspect-video overflow-hidden shrink-0">

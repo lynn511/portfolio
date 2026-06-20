@@ -35,7 +35,8 @@ const Workshops: FC<Props> = ({ workshops }) => {
                 href={w.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group block border-[1.5px] border-[#333333] rounded-[6px] overflow-hidden bg-[#1a1a1a] hover:border-green motion-safe:hover:-translate-y-[5px] motion-safe:transition-all duration-300 ease-brand focus-ring"
+                className="group block border-[1.5px] border-[#333333] overflow-hidden bg-[#1a1a1a] hover:border-green motion-safe:hover:-translate-y-[5px] motion-safe:transition-all duration-300 ease-brand focus-ring"
+                style={i === 0 ? { borderLeftWidth: '4px', borderLeftColor: '#00C24A', borderTopLeftRadius: 0, borderBottomLeftRadius: 0, borderTopRightRadius: '6px', borderBottomRightRadius: '6px' } : { borderRadius: '6px' }}
               >
                 <div className="relative aspect-video overflow-hidden">
                   <Image
