@@ -19,18 +19,18 @@ interface DomainGroup {
 const DOMAIN_GROUPS: DomainGroup[] = [
   {
     label: 'ML & RESEARCH',
-    highlight: 'Python',
-    keys: ['Python', 'PyTorch', 'TensorFlow', 'MLflow'],
+    highlight: 'GNN',
+    keys: ['GNN', 'GAT', 'PyTorch', 'Multi-agent Systems', 'SPADE', 'Graph Neural Networks'],
   },
   {
-    label: 'KNOWLEDGE SYSTEMS',
-    highlight: 'LangChain',
-    keys: ['LangChain', 'ChromaDB'],
+    label: 'CRYPTOGRAPHY',
+    highlight: 'Applied Cryptography',
+    keys: ['Applied Cryptography', 'Go', 'Provable Security', 'PRF/PRG'],
   },
   {
     label: 'SYSTEMS & INFRA',
-    highlight: 'AWS',
-    keys: ['AWS', 'Docker', 'FastAPI', 'OpenTofu', 'Vercel', 'GitHub Actions', 'Git'],
+    highlight: 'FastAPI',
+    keys: ['FastAPI', 'AWS Lambda', 'Next.js', 'OpenTofu', 'Supabase', 'TypeScript'],
   },
 ]
 
@@ -42,40 +42,37 @@ const Skills: FC<Props> = ({ skills }) => {
     skills: group.keys.filter((k) => skillNames.has(k)),
   }))
 
-  // Any skill not in a defined group falls into "OTHER"
   const claimed = new Set(DOMAIN_GROUPS.flatMap((g) => g.keys))
   const other = skills.map((s) => s.name).filter((n) => !claimed.has(n))
 
   return (
-    <section id="skills" className="py-24 px-6 border-t border-hairline">
+    <section id="skills" className="py-24 px-6 bg-ink border-t border-white/10">
       <div className="max-w-6xl mx-auto">
         <Reveal>
           <SectionHeader
             eyebrow="Capabilities"
             heading="Skills"
+            variant="dark"
           />
         </Reveal>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {groups.map((group, i) => (
             <Reveal key={group.label} delay={i * 0.08}>
-              <div className="group border-[1.5px] border-ink rounded-[6px] p-6 transition-colors duration-200 ease-brand hover:border-green-deep h-full">
-                {/* Domain label */}
-                <span className="block text-[10px] font-heading font-semibold uppercase tracking-[0.18em] text-faint mb-5">
+              <div className="border-[1.5px] border-[#333333] rounded-[4px] p-6 bg-[#1a1a1a] h-full">
+                <span className="block text-[10px] font-heading font-semibold uppercase tracking-[0.14em] text-muted mb-5">
                   {group.label}
                 </span>
-
-                {/* Skills */}
-                <div className="flex flex-wrap gap-x-4 gap-y-2.5">
+                <div className="flex flex-wrap gap-2">
                   {group.skills.map((name) => {
                     const isHighlight = name === group.highlight
                     return (
                       <span
                         key={name}
-                        className={`text-[13px] font-heading leading-snug transition-colors duration-200 ${
+                        className={`text-[12px] font-heading px-2 py-[3px] rounded-[4px] border bg-transparent ${
                           isHighlight
-                            ? 'text-green-deep font-semibold'
-                            : 'text-ink font-medium'
+                            ? 'border-green-deep text-green-deep'
+                            : 'border-[#444444] text-faint'
                         }`}
                       >
                         {name}
@@ -87,16 +84,18 @@ const Skills: FC<Props> = ({ skills }) => {
             </Reveal>
           ))}
 
-          {/* Overflow group for any uncategorised skills */}
           {other.length > 0 && (
             <Reveal delay={groups.length * 0.08}>
-              <div className="group border-[1.5px] border-ink rounded-[6px] p-6 transition-colors duration-200 ease-brand hover:border-green-deep h-full">
-                <span className="block text-[10px] font-heading font-semibold uppercase tracking-[0.18em] text-faint mb-5">
+              <div className="border-[1.5px] border-[#333333] rounded-[4px] p-6 bg-[#1a1a1a] h-full">
+                <span className="block text-[10px] font-heading font-semibold uppercase tracking-[0.14em] text-muted mb-5">
                   OTHER
                 </span>
-                <div className="flex flex-wrap gap-x-4 gap-y-2.5">
+                <div className="flex flex-wrap gap-2">
                   {other.map((name) => (
-                    <span key={name} className="text-[13px] font-heading font-medium text-ink leading-snug">
+                    <span
+                      key={name}
+                      className="text-[12px] font-heading px-2 py-[3px] rounded-[4px] border border-[#444444] text-faint bg-transparent"
+                    >
                       {name}
                     </span>
                   ))}

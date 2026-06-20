@@ -3,7 +3,7 @@
     "fullName": "Lynn El Moussaoui",
     "displayName": "Lynn el Moussaoui",
     "role": "Applied AI Engineer",
-    "bio": "I’m an Applied AI developer based in Lebanon. I like research and development, and I write tech blogs to simplify some AI topics. I deliver AI workshops across universities. Published at IEEE, featured in L'Orient-Le Jour, and always chasing the next hard problem :)",
+    "bio": "I\u2019m an Applied AI developer based in Lebanon. I like research and development, and I write tech blogs to simplify some AI topics. I deliver AI workshops across universities. Published at IEEE, featured in L'Orient-Le Jour, and always chasing the next hard problem :)",
     "siteDescription": "Lynn El Moussaoui - AI engineer specializing in applied machine learning, knowledge systems, and scalable AI infrastructure. Explore projects in AI systems, MLOps, and research.",
     "profileImage": "/profile-img.jpg",
     "siteUrl": "https://lynn511.github.io"
@@ -35,9 +35,20 @@
       "id": "serverless-ai-chatbot",
       "title": "Serverless AI CodeBase Auditor",
       "type": "Personal",
-      "categories": ["AI", "Cloud", "Backend"],
+      "categories": [
+        "AI",
+        "Cloud",
+        "Backend"
+      ],
       "shortDescription": "Serverless AI chatbot deployed on AWS using Lambda, API Gateway, Bedrock and S3 memory storage.",
-      "techStack": ["Python", "FastAPI", "AWS Lambda", "API Gateway", "AWS Bedrock", "OpenTofu"],
+      "techStack": [
+        "Python",
+        "FastAPI",
+        "AWS Lambda",
+        "API Gateway",
+        "AWS Bedrock",
+        "OpenTofu"
+      ],
       "startDate": "2026-03-26",
       "endDate": "2026-03-26",
       "image": "/projects/serverless/codebase.png",
@@ -50,7 +61,12 @@
       "id": "graph-rag-halytech",
       "title": "Graph-RAG Knowledge Assistant",
       "type": "Academic / Personal",
-      "categories": ["AI", "RAG", "Knowledge Graphs", "Backend"],
+      "categories": [
+        "AI",
+        "RAG",
+        "Knowledge Graphs",
+        "Backend"
+      ],
       "shortDescription": "Graph-based Retrieval-Augmented Generation system combining vector search and knowledge graphs for structured, context-aware question answering over documents.",
       "techStack": [
         "Python",
@@ -75,7 +91,11 @@
       "date": "2026-03-26",
       "description": "Overview of how I deployed a minimal AI tool on AWS using a serverless architecture, combining a Vercel frontend, API Gateway, Lambda backend, and Bedrock for LLM inference.",
       "coverImage": "https://miro.medium.com/v2/da:true/resize:fit:1200/0*7mMGGBq0o77Ppyrd",
-      "tags": ["AI", "Serverless", "AWS"],
+      "tags": [
+        "AI",
+        "Serverless",
+        "AWS"
+      ],
       "readingTime": 5,
       "featured": true,
       "url": "https://medium.com/munchy-bytes/building-a-serverless-ai-tool-on-aws-fe2cfd752147"
@@ -86,7 +106,11 @@
       "date": "2026-03-19",
       "description": "Guide to turning messy machine learning notebook work into a clean project structure using Git, modular architecture, and uv for dependency management.",
       "coverImage": "https://miro.medium.com/v2/resize:fit:640/format:webp/0*BGXly29egBSgIsye",
-      "tags": ["MLOps", "Git", "UV"],
+      "tags": [
+        "MLOps",
+        "Git",
+        "UV"
+      ],
       "featured": true,
       "url": "https://medium.com/munchy-bytes/mlops-v2-the-clean-project-guide-c5695522c277"
     },
@@ -96,7 +120,11 @@
       "date": "2025-08-22",
       "description": "Introduction to FAISS similarity search, covering embeddings, distance metrics, indexing strategies, and the basics of HNSW for efficient vector retrieval.",
       "coverImage": "https://miro.medium.com/v2/resize:fit:640/format:webp/0*AA75SUVdrGtpfwji",
-      "tags": ["FAISS", "Similarity Search", "Vector Databases"],
+      "tags": [
+        "FAISS",
+        "Similarity Search",
+        "Vector Databases"
+      ],
       "readingTime": 5,
       "featured": true,
       "url": "https://medium.com/munchy-bytes/faiss-similarity-search-ff113b9e87b7"
@@ -107,7 +135,11 @@
       "date": "2025-08-04",
       "description": "Practical comparison of synchronous and asynchronous embedding calls in Python, showing how asyncio can speed up I/O-bound embedding pipelines.",
       "coverImage": "https://miro.medium.com/v2/resize:fit:640/format:webp/0*lI60ASWzp98I4g6p",
-      "tags": ["Python", "Asyncio", "Embeddings"],
+      "tags": [
+        "Python",
+        "Asyncio",
+        "Embeddings"
+      ],
       "readingTime": 4,
       "featured": true,
       "url": "https://medium.com/munchy-bytes/async-embeddings-in-python-ff4471d3e54a"
@@ -118,7 +150,11 @@
       "date": "2023-10-01",
       "description": "A practical introduction to MLOps concepts and workflows.",
       "coverImage": "https://miro.medium.com/v2/da:true/resize:fit:1200/0*ckqf0B1UDdzCtefa",
-      "tags": ["MLOps", "Machine Learning", "Containers"],
+      "tags": [
+        "MLOps",
+        "Machine Learning",
+        "Containers"
+      ],
       "readingTime": 5,
       "featured": true,
       "url": "https://medium.com/munchy-bytes/mlops-101-9c1058d756f"
@@ -148,7 +184,7 @@
     },
     {
       "title": "AI Workshop: USJ",
-      "organizer": "Université Saint-Joseph de Beyrouth",
+      "organizer": "Universit\u00e9 Saint-Joseph de Beyrouth",
       "description": "Delivered series of 4 applied AI session covering machine learning fundamentals and practical coding examples using Python.",
       "link": "https://www.usj.edu.lb/",
       "photo": "/contributions/lynn-usj.png"
@@ -197,12 +233,16 @@
         "Worked at the intersection of AI and Economics",
         "Developed predictive models using scikit-learn with time-aware validation strategies and robust hyperparameter tuning to avoid leakage.",
         "Built semantic similarity systems using vector search (using FAISS) to standardize and deduplicate unstructured text across heterogeneous datasets.",
-        "Enabled higher-frequency insights from aggregated data through machine learning–based temporal transformation.",
+        "Enabled higher-frequency insights from aggregated data through machine learning\u2013based temporal transformation.",
         "Contributed to research and development efforts focused on time-series modeling and economic data analysis.",
         "Improved cross-source comparability of labor market datasets using semantic skill normalization.",
         "Maintained production PowerBI dashboards on a monthly release cycle to support stakeholder reporting."
       ],
-      "skills": ["Python", "Scikit-learn", "PowerBI"]
+      "skills": [
+        "Python",
+        "Scikit-learn",
+        "PowerBI"
+      ]
     },
     {
       "id": "zaka",
@@ -213,8 +253,13 @@
       "endDate": "Present",
       "description": [
         "Helped educate hundreds of students and professionals on AI, machine learning, and data science fundamentals.",
-        "Delivered AI workshops at Lebanese University, Saint Joseph University of Beirut, American University of Beirut, Beirut Arab University, Multilane, and the Michel Daher Foundation."      ],
-      "skills": ["Python", "Public Speaking", "AI Theory"]
+        "Delivered AI workshops at Lebanese University, Saint Joseph University of Beirut, American University of Beirut, Beirut Arab University, Multilane, and the Michel Daher Foundation."
+      ],
+      "skills": [
+        "Python",
+        "Public Speaking",
+        "AI Theory"
+      ]
     },
     {
       "id": "tech-blog",
@@ -227,7 +272,11 @@
         "I write technical articles on artificial intelligence, data science, and machine learning.",
         "Published articles on MLOps, statistics, data science, and data drift in computer vision."
       ],
-      "skills": ["Python", "TensorFlow", "PyTorch"]
+      "skills": [
+        "Python",
+        "TensorFlow",
+        "PyTorch"
+      ]
     },
     {
       "id": "monty",
@@ -243,7 +292,11 @@
         "Improved OCR algorithm accuracy for document processing workflows.",
         "Developed machine learning models to optimize text analysis and data extraction pipelines."
       ],
-      "skills": ["Computer Vision", "OCR", "Object Detection"]
+      "skills": [
+        "Computer Vision",
+        "OCR",
+        "Object Detection"
+      ]
     },
     {
       "id": "obsoft",
@@ -258,7 +311,10 @@
         "Categorized cryptocurrency wallets based on transaction patterns.",
         "Developed tagging strategies to identify wallet behaviors across blockchain networks."
       ],
-      "skills": ["Crypto", "Fraudulent Exchanges"]
+      "skills": [
+        "Crypto",
+        "Fraudulent Exchanges"
+      ]
     },
     {
       "id": "btekup",
@@ -273,7 +329,10 @@
         "Explored computer vision approaches for object detection in online product catalogs.",
         "Improved semantic matching between product images and descriptions."
       ],
-      "skills": ["Object Detection", "OCR"]
+      "skills": [
+        "Object Detection",
+        "OCR"
+      ]
     },
     {
       "id": "karma",
@@ -288,7 +347,11 @@
         "Improved supplier coordination processes and inventory management.",
         "Ensured timely delivery and cost-efficient supply chain operations."
       ],
-      "skills": ["Communication", "Sales", "Management"]
+      "skills": [
+        "Communication",
+        "Sales",
+        "Management"
+      ]
     },
     {
       "id": "redcross",
@@ -306,7 +369,10 @@
         "Completed Hostile Environment Awareness Training (HEAT).",
         "Member of the Logistics Committee."
       ],
-      "skills": ["Communication", "Leadership"]
+      "skills": [
+        "Communication",
+        "Leadership"
+      ]
     },
     {
       "id": "dataaurora",
@@ -318,7 +384,10 @@
       "description": [
         "Explored statistical analysis and data science fundamentals."
       ],
-      "skills": ["Python", "Data Science"]
+      "skills": [
+        "Python",
+        "Data Science"
+      ]
     }
   ],
   "skills": [
@@ -373,12 +442,64 @@
     {
       "name": "GitHub Actions",
       "description": "CI/CD automation platform used to build, test, and deploy machine learning and software systems automatically."
+    },
+    {
+      "name": "GNN",
+      "description": "Graph Neural Networks applied to relational data, social graphs, and knowledge representations."
+    },
+    {
+      "name": "GAT",
+      "description": "Graph Attention Networks used for learning weighted node relationships in heterogeneous graphs."
+    },
+    {
+      "name": "Graph Neural Networks",
+      "description": "Deep learning over graph-structured data for tasks in link prediction and node classification."
+    },
+    {
+      "name": "Multi-agent Systems",
+      "description": "Distributed AI architectures where autonomous agents coordinate to solve complex tasks."
+    },
+    {
+      "name": "SPADE",
+      "description": "Python framework for building and deploying multi-agent systems using the FIPA protocol."
+    },
+    {
+      "name": "Applied Cryptography",
+      "description": "Practical implementation of cryptographic primitives including PRFs, PRGs, and secure protocols."
+    },
+    {
+      "name": "Go",
+      "description": "Systems programming language used for building high-performance cryptographic and network tools."
+    },
+    {
+      "name": "Provable Security",
+      "description": "Formal proofs of cryptographic security under computational complexity assumptions."
+    },
+    {
+      "name": "PRF/PRG",
+      "description": "Pseudorandom functions and generators as building blocks for cryptographic constructions."
+    },
+    {
+      "name": "AWS Lambda",
+      "description": "Serverless compute used to deploy event-driven AI inference and data processing pipelines."
+    },
+    {
+      "name": "Next.js",
+      "description": "React framework used for building performant, full-stack web applications."
+    },
+    {
+      "name": "Supabase",
+      "description": "Open-source backend platform providing databases, auth, and storage for web applications."
+    },
+    {
+      "name": "TypeScript",
+      "description": "Typed superset of JavaScript used for building reliable, maintainable frontend and backend systems."
     }
   ],
   "education": [
     {
       "degree": "Master of Science in Artificial Intelligence",
-      "institution": "Saint Joseph University of Beirut — ESIB",
+      "institution": "Saint Joseph University of Beirut \u2014 ESIB",
       "location": "Lebanon",
       "startDate": "2024-09-01",
       "endDate": "present",
@@ -386,7 +507,7 @@
     },
     {
       "degree": "Bachelor of Science in Mathematics and Data Science",
-      "institution": "Saint Joseph University of Beirut — Faculty of Science",
+      "institution": "Saint Joseph University of Beirut \u2014 Faculty of Science",
       "location": "Lebanon",
       "startDate": "2021-09-01",
       "endDate": "2024-06-01",
