@@ -32,6 +32,7 @@ export default function Home() {
             role={personal.role}
             displayName={personal.displayName}
             profileImage={personal.profileImage}
+            skills={skills}
             socials={socials}
           />
         </Reveal>
