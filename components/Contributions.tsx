@@ -8,8 +8,10 @@ interface Contribution {
   date?: string
   organizer: string
   description: string
-  link: string
-  photo: string
+  link?: string
+  photo?: string
+  imageFit?: 'cover' | 'contain'
+  imageBackground?: 'light' | 'dark'
   type: 'research' | 'press'
 }
 
@@ -45,18 +47,30 @@ const Contributions: FC<Props> = ({ contributions }) => {
                   )}
 
                   {/* Image */}
-                  <div className="relative w-full sm:w-[260px] flex-shrink-0 h-[200px] sm:h-auto overflow-hidden">
-                    <Image
-                      src={c.photo}
-                      alt={c.title}
-                      fill
-                      sizes="(max-width: 640px) 100vw, 260px"
-                      className="object-cover motion-safe:group-hover:scale-[1.04] motion-safe:transition-transform duration-500 ease-brand"
-                    />
-                    <span className="absolute bottom-2 right-2 text-[10px] font-heading font-semibold uppercase tracking-[0.1em] bg-black/60 text-paper px-2 py-1 rounded-[3px]">
-                      {c.organizer}
-                    </span>
-                  </div>
+                  {c.photo && (
+                    <div
+                      className={`relative w-full sm:w-[260px] flex-shrink-0 h-[200px] sm:h-auto overflow-hidden ${
+                        c.imageFit === 'contain'
+                          ? c.imageBackground === 'dark'
+                            ? 'bg-ink p-6'
+                            : 'bg-white p-6'
+                          : ''
+                      }`}
+                    >
+                      <Image
+                        src={c.photo}
+                        alt={c.title}
+                        fill
+                        sizes="(max-width: 640px) 100vw, 260px"
+                        className={`motion-safe:group-hover:scale-[1.04] motion-safe:transition-transform duration-500 ease-brand ${
+                          c.imageFit === 'contain' ? 'object-contain' : 'object-cover'
+                        }`}
+                      />
+                      <span className="absolute bottom-2 right-2 text-[10px] font-heading font-semibold uppercase tracking-[0.1em] bg-black/60 text-paper px-2 py-1 rounded-[3px]">
+                        {c.organizer}
+                      </span>
+                    </div>
+                  )}
 
                   {/* Content */}
                   <div className="flex-1 p-7 flex flex-col justify-center">
@@ -78,15 +92,17 @@ const Contributions: FC<Props> = ({ contributions }) => {
                       {c.description}
                     </p>
 
-                    <a
-                      href={c.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="green-sweep text-[12px] font-heading font-semibold text-green hover:text-paper transition-colors duration-200 inline-flex items-center gap-1.5 w-fit focus-ring"
-                    >
-                      {linkLabel}
-                      <span>↗</span>
-                    </a>
+                    {c.link && (
+                      <a
+                        href={c.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="green-sweep text-[12px] font-heading font-semibold text-green hover:text-paper transition-colors duration-200 inline-flex items-center gap-1.5 w-fit focus-ring"
+                      >
+                        {linkLabel}
+                        <span>↗</span>
+                      </a>
+                    )}
                   </div>
                 </article>
               </Reveal>

@@ -249,6 +249,24 @@
       "link": "https://www.lorientlejour.com/article/1363911/lynn-el-moussaoui-entre-ethique-et-vulgarisation-des-sciences-au-service-de-la-societe.html",
       "photo": "/contributions/lynn_olj.jpg",
       "type": "press"
+    },
+    {
+      "title": "Evaluating Temporal Evidence in LLM-Assisted Sensor Data Cleaning",
+      "organizer": "ICONET 2026",
+      "description": "Authors: Hadi Fadlallah, Lynn El Moussaoui",
+      "photo": "/contributions/iconet-2026.png",
+      "imageFit": "contain",
+      "imageBackground": "dark",
+      "type": "research"
+    },
+    {
+      "title": "GNN-Assisted Power Packet Routing with Multi-Agent Reservation for Energy Internet Networks",
+      "organizer": "IECON 2026",
+      "description": "MSc thesis research on GNN-assisted power packet routing with multi-agent reservation for Energy Internet networks.",
+      "photo": "/contributions/iecon-2026.png",
+      "imageFit": "contain",
+      "imageBackground": "light",
+      "type": "research"
     }
   ],
   "experience": [
