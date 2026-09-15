@@ -10,6 +10,7 @@ interface Contribution {
   description: string
   link: string
   photo: string
+  type: 'research' | 'press'
 }
 
 interface Props {
@@ -31,7 +32,7 @@ const Contributions: FC<Props> = ({ contributions }) => {
 
         <div className="flex flex-col divide-y divide-white/10 border-y border-white/10">
           {contributions.map((c, i) => {
-            const isResearch = c.organizer.includes('IEEE')
+            const isResearch = c.type === 'research'
             const badgeLabel = isResearch ? 'Research Paper' : 'Press Feature'
             const linkLabel = isResearch ? 'Read the paper' : 'Read the article'
 
