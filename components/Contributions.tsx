@@ -3,7 +3,7 @@ import type { FC } from 'react'
 import SectionHeader from './SectionHeading'
 import Reveal from './ScrollReveal'
 
-interface Contribution {
+export interface Contribution {
   title: string
   date?: string
   organizer: string
@@ -17,6 +17,22 @@ interface Contribution {
 
 interface Props {
   contributions: Contribution[]
+}
+
+const CONTRIBUTION_TYPES: readonly string[] = ['research', 'press']
+const IMAGE_FITS: readonly string[] = ['cover', 'contain']
+const IMAGE_BACKGROUNDS: readonly string[] = ['light', 'dark']
+
+export function isContributionType(value: string): value is Contribution['type'] {
+  return CONTRIBUTION_TYPES.includes(value)
+}
+
+export function isImageFit(value: string): value is NonNullable<Contribution['imageFit']> {
+  return IMAGE_FITS.includes(value)
+}
+
+export function isImageBackground(value: string): value is NonNullable<Contribution['imageBackground']> {
+  return IMAGE_BACKGROUNDS.includes(value)
 }
 
 const Contributions: FC<Props> = ({ contributions }) => {

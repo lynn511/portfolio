@@ -1,7 +1,12 @@
 import content from '@/content/content.json'
 import About from '@/components/About'
 import Blog from '@/components/Blog'
-import Contributions from '@/components/Contributions'
+import Contributions, {
+  type Contribution,
+  isContributionType,
+  isImageFit,
+  isImageBackground,
+} from '@/components/Contributions'
 import Education from '@/components/Education'
 import Experience from '@/components/Experience'
 import Footer from '@/components/Footer'
@@ -15,6 +20,19 @@ import Workshops from '@/components/Workshops'
 export default function Home() {
   const { personal, socials, projects, blogs, workshops, contributions, skills, experience, education } =
     content
+
+  const validatedContributions: Contribution[] = contributions.map((c) => {
+    if (!isContributionType(c.type)) {
+      throw new Error(`Invalid contribution type "${c.type}" for "${c.title}"`)
+    }
+    if (c.imageFit !== undefined && !isImageFit(c.imageFit)) {
+      throw new Error(`Invalid imageFit "${c.imageFit}" for "${c.title}"`)
+    }
+    if (c.imageBackground !== undefined && !isImageBackground(c.imageBackground)) {
+      throw new Error(`Invalid imageBackground "${c.imageBackground}" for "${c.title}"`)
+    }
+    return { ...c, type: c.type, imageFit: c.imageFit, imageBackground: c.imageBackground }
+  })
 
   return (
     <>
@@ -57,7 +75,7 @@ export default function Home() {
         </Reveal>
 
         <Reveal delay={0.1} className="bg-ink">
-          <Contributions contributions={contributions} />
+          <Contributions contributions={validatedContributions} />
         </Reveal>
       </main>
 
