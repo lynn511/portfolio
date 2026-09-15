@@ -323,23 +323,6 @@
       ]
     },
     {
-      "id": "tech-blog",
-      "position": "Tech Blog Writer and editor",
-      "company": "Medium",
-      "location": "Remote",
-      "startDate": "2023-09-01",
-      "endDate": "Present",
-      "description": [
-        "I write technical articles on artificial intelligence, data science, and machine learning.",
-        "Published articles on MLOps, statistics, data science, and data drift in computer vision."
-      ],
-      "skills": [
-        "Python",
-        "TensorFlow",
-        "PyTorch"
-      ]
-    },
-    {
       "id": "monty",
       "position": "Data Science Intern",
       "company": "Monty",
