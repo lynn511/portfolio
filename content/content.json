@@ -6,7 +6,7 @@
     "bio": "I'm an AI engineer and researcher based in Beirut. I like the part of AI where an idea has to survive contact with actual code, hardware, and constraints. I build and experiment with LLM systems, graph learning, edge AI, and hardware/software co-design. A lot of my work is about understanding what makes these systems useful, efficient, and actually runnable outside ideal conditions. I also spend a questionable amount of time learning cryptography.",
     "siteDescription": "Lynn El Moussaoui - AI engineer specializing in applied machine learning, knowledge systems, and scalable AI infrastructure. Explore projects in AI systems, MLOps, and research.",
     "profileImage": "/profile-img.jpg",
-    "siteUrl": "https://lynn511.github.io"
+    "siteUrl": "https://www.lynnelmoussaoui.me"
   },
   "socials": [
     {
@@ -131,7 +131,7 @@
     },
     {
       "slug": "MLOPS V2: the clean project guide",
-      "title": "MLOPS V2: the clean project guide",
+      "title": "MLOps V2: The Clean Project Guide",
       "date": "2026-03-19",
       "description": "Guide to turning messy machine learning notebook work into a clean project structure using Git, modular architecture, and uv for dependency management.",
       "coverImage": "https://miro.medium.com/v2/resize:fit:640/format:webp/0*BGXly29egBSgIsye",
