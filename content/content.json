@@ -2,8 +2,8 @@
   "personal": {
     "fullName": "Lynn El Moussaoui",
     "displayName": "Lynn el Moussaoui",
-    "role": "Applied AI Engineer",
-    "bio": "I'm an AI engineer based in Beirut who can't stop building things. My work spans ML systems, applied research, and making AI accessible. I'm invested designing codes, workshops, and writing. I've delivered AI workshops across Lebanese universities, helping hundreds of students and professionals get hands on with machine learning. On the research side, I hold an MSc in AI from USJ, with a thesis on GNN-based power routing. Built several projects, picked a few for you to check out down below. I also write a technical MLOps series on Medium to make production AI less intimidating. Currently learning about Cryptography. Always chasing the next hard problem! :)",
+    "role": "AI Engineer & Researcher",
+    "bio": "I'm an AI engineer and researcher based in Beirut. I like the part of AI where an idea has to survive contact with actual code, hardware, and constraints. I build and experiment with LLM systems, graph learning, edge AI, and hardware/software co-design. A lot of my work is about understanding what makes these systems useful, efficient, and actually runnable outside ideal conditions. I also spend a questionable amount of time learning cryptography.",
     "siteDescription": "Lynn El Moussaoui - AI engineer specializing in applied machine learning, knowledge systems, and scalable AI infrastructure. Explore projects in AI systems, MLOps, and research.",
     "profileImage": "/profile-img.jpg",
     "siteUrl": "https://lynn511.github.io"
