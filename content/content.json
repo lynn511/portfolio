@@ -104,6 +104,7 @@
       "slug": "mlops_v3_iac",
       "title": "MLOps V3: Infrastructure as Code (IaC)",
       "date": "2026-04-22",
+      "description": "Using OpenTofu to define reproducible ML infrastructure, manage cloud resources as code, detect configuration drift, and spin up consistent training and deployment environments.",
       "coverImage": "https://miro.medium.com/v2/da:true/resize:fit:1200/0*wtwpOE8lGmgu1K61",
       "tags": [
         "MLOps",
@@ -192,42 +193,42 @@
     {
       "title": "AI Workshop: BAU",
       "organizer": "Beirut Arab University",
-      "description": "Delivered 3 hours workshop on AI, with hands on Python application",
+      "description": "Delivered a 3-hour hands-on workshop on AI fundamentals and practical Python applications.",
       "link": "https://www.bau.edu.lb/",
       "photo": "/contributions/bau.png"
     },
     {
       "title": "AI Workshop: AUB",
       "organizer": "American University of Beirut",
-      "description": "Introduced students to Zaka during the 'Learn the Basics of AI' session",
+      "description": "Introduced students to AI fundamentals during the \"Learn the Basics of AI\" session with Zaka.",
       "link": "https://www.aub.edu.lb/",
       "photo": "/contributions/aub.png"
     },
     {
       "title": "AI Workshop: Lebanese University",
       "organizer": "Lebanese University",
-      "description": "Presented a technical session introducing machine learning concepts and practical Python workflows for data science applications.",
+      "description": "Delivered a technical session on machine learning concepts and practical Python workflows for data science.",
       "link": "http://www.ul.edu.lb/",
       "photo": "/contributions/LU.png"
     },
     {
       "title": "AI Workshop: USJ",
       "organizer": "Universit\u00e9 Saint-Joseph de Beyrouth",
-      "description": "Delivered series of 4 applied AI session covering machine learning fundamentals and practical coding examples using Python.",
+      "description": "Delivered a four-session applied AI series covering machine learning fundamentals and hands-on Python.",
       "link": "https://www.usj.edu.lb/",
       "photo": "/contributions/lynn-usj.png"
     },
     {
       "title": "AI Workshop: Multilane",
       "organizer": "Multilane",
-      "description": "Conducted a workshop on Python and data science fundamentals, demonstrating practical machine learning workflows.",
+      "description": "Led a workshop on Python and data science fundamentals with practical machine learning exercises.",
       "link": "https://multilane.com/",
       "photo": "/contributions/multilane.png"
     },
     {
       "title": "AI Workshop: Michel Daher Foundation",
       "organizer": "Michel Daher Foundation",
-      "description": "Led a hands-on session introducing Python programming and the basics of machine learning for real-world applications.",
+      "description": "Led a hands-on introduction to Python programming and machine learning.",
       "link": "https://micheldaherfoundation.org/",
       "photo": "/contributions/daher_foundation.png"
     }
