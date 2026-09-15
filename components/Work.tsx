@@ -145,29 +145,6 @@ function Card({ card, num }: { card: CardData; num: string }) {
   )
 }
 
-const PLACEHOLDERS: CardData[] = [
-  {
-    id: 'placeholder-crypto',
-    title: '[ Cryptography Flagship ]',
-    description: 'This flagship project is coming soon — check back later.',
-    tags: ['CRYPTOGRAPHY', 'SYSTEMS'],
-    links: {},
-    stripVariant: 'flagship',
-    isLive: false,
-    isPlaceholder: true,
-  },
-  {
-    id: 'placeholder-social',
-    title: '[ Social Impact Flagship ]',
-    description: 'This flagship project is coming soon — check back later.',
-    tags: ['SOCIAL IMPACT', 'AI'],
-    links: {},
-    stripVariant: 'flagship',
-    isLive: false,
-    isPlaceholder: true,
-  },
-]
-
 const Work: FC<Props> = ({ projects }) => {
   const realCards: CardData[] = projects.map((p) => ({
     id: p.id,
@@ -180,7 +157,7 @@ const Work: FC<Props> = ({ projects }) => {
     isPlaceholder: false,
   }))
 
-  const allCards = [...realCards, ...PLACEHOLDERS]
+  const allCards = realCards
 
   return (
     <section id="work" className="py-24 px-6 border-t border-hairline">

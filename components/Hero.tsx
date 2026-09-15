@@ -6,8 +6,14 @@ import {
   useTransform,
   useSpring,
 } from 'motion/react'
+import { League_Spartan } from 'next/font/google'
 
-const HEADLINE = ['BUILT', 'FOR', 'IMPACT']
+const leagueSpartan = League_Spartan({
+  subsets: ['latin'],
+  weight: '800',
+})
+
+const HEADLINE = ['LYNN', 'EL', 'MOUSSAOUI']
 const ease: [number, number, number, number] = [0.2, 0.7, 0.2, 1]
 
 export default function Hero({ role }: { name: string; role: string }) {
@@ -34,47 +40,49 @@ export default function Hero({ role }: { name: string; role: string }) {
 
   return (
     <section
-      className="relative min-h-[70vh] flex flex-col justify-center overflow-hidden bg-paper"
+      className="relative min-h-[70vh] flex flex-col justify-center bg-paper"
       onMouseMove={handleMouseMove}
     >
-      {/* ── Diagonal decorative blocks ── */}
+      <div className="absolute inset-0 overflow-hidden z-0" aria-hidden="true">
+        {/* ── Diagonal decorative blocks ── */}
 
-      {/* Block 1 — large green, entrance from right */}
-      <motion.div
-        className="absolute top-[-20%] right-[-14%] md:right-[-8%]"
-        initial={{ x: reduced ? 0 : '130%', opacity: reduced ? 1 : 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.75, delay: reduced ? 0 : 0.45, ease }}
-      >
+        {/* Block 1 — large green, entrance from right */}
         <motion.div
-          className="w-[220px] h-[400px] md:w-[320px] md:h-[560px] rotate-[18deg] bg-green"
-          style={{ x: b1x, y: b1y }}
-        />
-      </motion.div>
+          className="absolute top-[-20%] right-[-14%] md:right-[-8%]"
+          initial={{ x: reduced ? 0 : '130%', opacity: reduced ? 1 : 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.75, delay: reduced ? 0 : 0.45, ease }}
+        >
+          <motion.div
+            className="w-[220px] h-[400px] md:w-[320px] md:h-[560px] rotate-[18deg] bg-green"
+            style={{ x: b1x, y: b1y }}
+          />
+        </motion.div>
 
-      {/* Block 2 — ink, offset, entrance from right */}
-      <motion.div
-        className="absolute top-[8%] right-[-22%] md:right-[-16%]"
-        initial={{ x: reduced ? 0 : '130%', opacity: reduced ? 1 : 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        transition={{ duration: 0.75, delay: reduced ? 0 : 0.55, ease }}
-      >
+        {/* Block 2 — ink, offset, entrance from right */}
         <motion.div
-          className="w-[180px] h-[320px] md:w-[260px] md:h-[440px] rotate-[-12deg] bg-ink"
-          style={{ x: b2x, y: b2y }}
-        />
-      </motion.div>
+          className="absolute top-[8%] right-[-22%] md:right-[-16%]"
+          initial={{ x: reduced ? 0 : '130%', opacity: reduced ? 1 : 0 }}
+          animate={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.75, delay: reduced ? 0 : 0.55, ease }}
+        >
+          <motion.div
+            className="w-[180px] h-[320px] md:w-[260px] md:h-[440px] rotate-[-12deg] bg-ink"
+            style={{ x: b2x, y: b2y }}
+          />
+        </motion.div>
 
-      {/* Block 3 — small green, lower-left accent */}
-      <motion.div
-        className="absolute bottom-[10%] left-[-2%] w-[60px] h-[110px] md:w-[80px] md:h-[140px] bg-green rotate-[18deg]"
-        initial={{ opacity: 0, x: reduced ? 0 : -20 }}
-        animate={{ opacity: 0.55, x: 0 }}
-        transition={{ duration: 0.6, delay: reduced ? 0 : 0.6, ease }}
-      />
+        {/* Block 3 — small green, lower-left accent */}
+        <motion.div
+          className="absolute bottom-[10%] left-[-2%] w-[60px] h-[110px] md:w-[80px] md:h-[140px] bg-green rotate-[18deg]"
+          initial={{ opacity: 0, x: reduced ? 0 : -20 }}
+          animate={{ opacity: 0.55, x: 0 }}
+          transition={{ duration: 0.6, delay: reduced ? 0 : 0.6, ease }}
+        />
+      </div>
 
       {/* ── Main content ── */}
-      <div className="relative z-10 max-w-6xl mx-auto w-full px-6 md:px-12 pt-36 pb-28">
+      <div className="relative z-10 max-w-6xl mx-auto w-full pl-6 pr-0 md:px-12 pt-36 pb-28">
 
         {/* Eyebrow */}
         <div className="flex items-center gap-3 mb-8">
@@ -97,11 +105,11 @@ export default function Hero({ role }: { name: string; role: string }) {
 
         {/* Headline — words rise from overflow masks */}
         <h1
-          className="font-heading font-semibold uppercase leading-[0.88] tracking-[-0.05em] text-[clamp(52px,9vw,116px)] text-ink mb-8 select-none"
+          className={`${leagueSpartan.className} font-extrabold uppercase leading-[0.88] tracking-[-0.05em] text-[38px] md:text-[clamp(52px,9vw,116px)] text-ink mb-8 select-none pr-[45%] md:pr-0`}
           aria-label={HEADLINE.join(' ')}
         >
           {HEADLINE.map((word, i) => (
-            <span key={word} className="block overflow-hidden">
+            <span key={word} className="block w-fit overflow-hidden">
               <motion.span
                 className="block"
                 initial={{ y: reduced ? 0 : '105%' }}
@@ -125,7 +133,7 @@ export default function Hero({ role }: { name: string; role: string }) {
           transition={{ duration: 0.5, delay: reduced ? 0 : 0.65, ease }}
         >
           <span className="inline-block px-4 py-2 rounded-[4px] bg-ink text-paper text-[11px] font-heading font-semibold uppercase tracking-[0.14em]">
-            ML SYSTEMS · CRYPTO · SOCIAL IMPACT
+            BUILDER. THINKER. EXPLORER.
           </span>
         </motion.div>
       </div>

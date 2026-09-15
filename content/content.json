@@ -3,7 +3,7 @@
     "fullName": "Lynn El Moussaoui",
     "displayName": "Lynn el Moussaoui",
     "role": "Applied AI Engineer",
-    "bio": "I\u2019m an Applied AI developer based in Lebanon. I like research and development, and I write tech blogs to simplify some AI topics. I deliver AI workshops across universities. Published at IEEE, featured in L'Orient-Le Jour, and always chasing the next hard problem :)",
+    "bio": "I'm an AI engineer based in Beirut who can't stop building things. My work spans ML systems, applied research, and making AI accessible. I'm invested designing codes, workshops, and writing. I've delivered AI workshops across Lebanese universities, helping hundreds of students and professionals get hands on with machine learning. On the research side, I hold an MSc in AI from USJ, with a thesis on GNN-based power routing. Built several projects, picked a few for you to check out down below. I also write a technical MLOps series on Medium to make production AI less intimidating. Currently learning about Cryptography. Always chasing the next hard problem! :)",
     "siteDescription": "Lynn El Moussaoui - AI engineer specializing in applied machine learning, knowledge systems, and scalable AI infrastructure. Explore projects in AI systems, MLOps, and research.",
     "profileImage": "/profile-img.jpg",
     "siteUrl": "https://lynn511.github.io"
@@ -40,7 +40,7 @@
         "Cloud",
         "Backend"
       ],
-      "shortDescription": "Serverless AI chatbot deployed on AWS using Lambda, API Gateway, Bedrock and S3 memory storage.",
+      "shortDescription": "Paste any public GitHub repo and get an instant AI-powered audit, maps the architecture, scores MLOps health, and surfaces actionable improvement recommendations.",
       "techStack": [
         "Python",
         "FastAPI",
@@ -67,7 +67,7 @@
         "Knowledge Graphs",
         "Backend"
       ],
-      "shortDescription": "Graph-based Retrieval-Augmented Generation system combining vector search and knowledge graphs for structured, context-aware question answering over documents.",
+      "shortDescription": "Turns marketing documents into a fast, searchable knowledge base. Uses OpenAI embeddings + ChromaDB for instant retrieval and a RAG pipeline for context-aware responses, so teams get consistent answers from their own content.",
       "techStack": [
         "Python",
         "LangChain",
@@ -82,9 +82,37 @@
       "links": {
         "github": "https://github.com/lynn511/Graph-Rag-Halytech"
       }
+    },
+    {
+      "id": "gnn-power-packet-routing",
+      "title": "GNN Power Packet Routing",
+      "categories": [
+        "ML",
+        "Research"
+      ],
+      "shortDescription": "MSc thesis hybrid GNN/GAT + multi-agent system for intelligent power-packet routing in Energy Internet networks.",
+      "techStack": [
+        "PyTorch",
+        "GAT",
+        "SPADE"
+      ],
+      "links": {}
     }
   ],
   "blogs": [
+    {
+      "slug": "mlops_v3_iac",
+      "title": "MLOps V3: Infrastructure as Code (IaC)",
+      "date": "2026-04-22",
+      "coverImage": "https://miro.medium.com/v2/da:true/resize:fit:1200/0*wtwpOE8lGmgu1K61",
+      "tags": [
+        "MLOps",
+        "IaC",
+        "DevOps"
+      ],
+      "featured": true,
+      "url": "https://medium.com/munchy-bytes/mlops-v3-infrastructure-as-code-iac-c81cb0457b8a"
+    },
     {
       "slug": "serverless_ai_system_aws",
       "title": "Serverless AI in AWS",
@@ -208,7 +236,7 @@
     {
       "title": "FedDQ",
       "date": "2025-02-21",
-      "organizer": "IEEE MENACOMM 2025",
+      "organizer": "IEEE MENACOMM 2025 LAU BYBLOS",
       "description": "IEEE research paper proposing a federated framework for context-aware data quality assessment in IoT and wireless sensor networks.",
       "link": "https://ieeexplore.ieee.org/document/10910992/",
       "photo": "/contributions/contributions.jpg"
@@ -222,6 +250,18 @@
     }
   ],
   "experience": [
+    {
+      "id": "leapo-sociallab",
+      "position": "AI Training & Research Associate",
+      "company": "Leapo · SocialLab",
+      "location": "Lebanon",
+      "startDate": "2026-06-01",
+      "endDate": "Present",
+      "description": [
+        "Working at the intersection of AI and education — designing research-backed frameworks and training programs for real-world impact."
+      ],
+      "skills": []
+    },
     {
       "id": "ai-economic-pulse",
       "position": "AI Engineer",
@@ -250,7 +290,7 @@
       "company": "ZAKA AI",
       "location": "Lebanon",
       "startDate": "2023-04-01",
-      "endDate": "Present",
+      "endDate": "2026-05-01",
       "description": [
         "Helped educate hundreds of students and professionals on AI, machine learning, and data science fundamentals.",
         "Delivered AI workshops at Lebanese University, Saint Joseph University of Beirut, American University of Beirut, Beirut Arab University, Multilane, and the Michel Daher Foundation."
@@ -335,25 +375,6 @@
       ]
     },
     {
-      "id": "karma",
-      "position": "Operations Assistant",
-      "company": "Karma General Trading",
-      "location": "Lebanon",
-      "startDate": "2021-05-01",
-      "endDate": "2023-10-01",
-      "description": [
-        "Managed supply chain coordination and supplier communication.",
-        "Monitored stock levels and supported logistics operations.",
-        "Improved supplier coordination processes and inventory management.",
-        "Ensured timely delivery and cost-efficient supply chain operations."
-      ],
-      "skills": [
-        "Communication",
-        "Sales",
-        "Management"
-      ]
-    },
-    {
       "id": "redcross",
       "position": "Volunteer",
       "company": "Lebanese Red Cross",
@@ -372,21 +393,6 @@
       "skills": [
         "Communication",
         "Leadership"
-      ]
-    },
-    {
-      "id": "dataaurora",
-      "position": "Data Science Intern",
-      "company": "Data Aurora",
-      "location": "Lebanon",
-      "startDate": "2019-07-01",
-      "endDate": "2019-08-01",
-      "description": [
-        "Explored statistical analysis and data science fundamentals."
-      ],
-      "skills": [
-        "Python",
-        "Data Science"
       ]
     }
   ],
@@ -444,10 +450,6 @@
       "description": "CI/CD automation platform used to build, test, and deploy machine learning and software systems automatically."
     },
     {
-      "name": "GNN",
-      "description": "Graph Neural Networks applied to relational data, social graphs, and knowledge representations."
-    },
-    {
       "name": "GAT",
       "description": "Graph Attention Networks used for learning weighted node relationships in heterogeneous graphs."
     },
@@ -476,24 +478,8 @@
       "description": "Formal proofs of cryptographic security under computational complexity assumptions."
     },
     {
-      "name": "PRF/PRG",
-      "description": "Pseudorandom functions and generators as building blocks for cryptographic constructions."
-    },
-    {
-      "name": "AWS Lambda",
-      "description": "Serverless compute used to deploy event-driven AI inference and data processing pipelines."
-    },
-    {
-      "name": "Next.js",
-      "description": "React framework used for building performant, full-stack web applications."
-    },
-    {
       "name": "Supabase",
       "description": "Open-source backend platform providing databases, auth, and storage for web applications."
-    },
-    {
-      "name": "TypeScript",
-      "description": "Typed superset of JavaScript used for building reliable, maintainable frontend and backend systems."
     }
   ],
   "education": [

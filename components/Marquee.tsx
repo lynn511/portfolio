@@ -1,12 +1,15 @@
 const ITEMS = [
   'APPLIED AI ENGINEER',
-  'ML SYSTEMS',
+  'MLOPS',
   'CRYPTOGRAPHY',
   'SOCIAL IMPACT',
+  'R&D',
   'IEEE PUBLISHED',
   'WORKSHOP FACILITATOR',
-  'AI RESEARCH',
+  'TECH BLOGS',
   'OPEN SOURCE',
+  'GRAPHS',
+  'BUILDING FROM BEIRUT',
 ]
 
 const SEP = <span className="mx-6 text-ink/40 select-none" aria-hidden="true">◆</span>

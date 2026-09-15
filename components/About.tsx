@@ -27,14 +27,14 @@ const SKILL_GROUPS = [
     keywords: ['GNN', 'GAT', 'PyTorch', 'Multi-agent Systems', 'SPADE', 'Graph Neural Networks'],
   },
   {
-    label: 'Cryptography',
+    label: 'Currently Learning',
     featured: 'Applied Cryptography',
     keywords: ['Applied Cryptography', 'Go', 'Provable Security', 'PRF/PRG'],
   },
   {
     label: 'Systems & Infra',
     featured: 'FastAPI',
-    keywords: ['FastAPI', 'Next.js', 'AWS Lambda', 'OpenTofu', 'Supabase', 'TypeScript', 'Python', 'Docker'],
+    keywords: ['FastAPI', 'Next.js', 'AWS Lambda', 'AWS', 'OpenTofu', 'Supabase', 'TypeScript', 'Python', 'Docker'],
   },
 ]
 
@@ -42,9 +42,9 @@ const About: FC<Props> = ({ bio, role, displayName, profileImage, skills, social
   const skillNames = new Set(skills.map((s) => s.name.toLowerCase()))
 
   const nameParts = displayName.split(' ')
-  const nameLine1 = nameParts.slice(0, -1).join(' ')
-  const nameLine2 = nameParts[nameParts.length - 1].toUpperCase()
-  const greenIdx = nameLine2.indexOf('A')
+  const nameLine1 = nameParts[0].toUpperCase()
+  const highlightWord = nameParts[1]?.toUpperCase()
+  const nameLine2 = nameParts.slice(2).join(' ').toUpperCase()
 
   return (
     <section id="about" className="py-20 px-6 bg-ink">
@@ -109,16 +109,14 @@ const About: FC<Props> = ({ bio, role, displayName, profileImage, skills, social
             style={{ fontSize: 38, letterSpacing: '-0.05em', lineHeight: 0.9 }}
           >
             {nameLine1}
-            <br />
-            {greenIdx >= 0 ? (
+            {highlightWord && (
               <>
-                {nameLine2.slice(0, greenIdx)}
-                <span style={{ color: '#00C24A' }}>{nameLine2[greenIdx]}</span>
-                {nameLine2.slice(greenIdx + 1)}
+                {' '}
+                <span style={{ color: '#00C24A' }}>{highlightWord}</span>
               </>
-            ) : (
-              nameLine2
             )}
+            <br />
+            {nameLine2}
           </p>
 
           {/* Role */}

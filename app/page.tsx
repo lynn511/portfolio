@@ -9,7 +9,6 @@ import Hero from '@/components/Hero'
 import Marquee from '@/components/Marquee'
 import Nav from '@/components/Nav'
 import Reveal from '@/components/ScrollReveal'
-import Skills from '@/components/Skills'
 import Work from '@/components/Work'
 import Workshops from '@/components/Workshops'
 
@@ -36,8 +35,6 @@ export default function Home() {
             socials={socials}
           />
         </Reveal>
-
-        <Skills skills={skills} />
 
         <Reveal delay={0.1}>
           <Experience experience={experience} />
